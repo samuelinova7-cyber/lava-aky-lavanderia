@@ -17,12 +17,12 @@ export default function App() {
         <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20132651.png" alt="Lava aky Logo" className="h-10" referrerPolicy="no-referrer" />
-            <div className="text-xl font-bold text-[#846CAD]">LAVA AKY Lavanderia de Autoatendimento</div>
+            <div className="text-xl font-bold text-[#846CAD]"><span className="font-chocolate">LAVA AKY</span> Lavanderia de Autoatendimento</div>
           </div>
           <div className="hidden md:flex items-center gap-6">
             <a href="#planos" className="text-stone-700 hover:text-[#CB2E50] font-bold uppercase">PLANOS</a>
             <a href="#b2b" className="text-stone-700 hover:text-[#CB2E50] font-bold uppercase">CNPJ/CONDOMÍNIOS</a>
-            <a href="#unidades" className="text-stone-700 hover:text-[#CB2E50] font-bold uppercase">UNIDADES</a>
+            <a href="#unidades" className="text-stone-700 hover:text-[#CB2E50] font-bold uppercase">LOCAL</a>
             <a href="https://wa.me/5553991222096" className="bg-[#E2BA59] text-white px-4 py-2 rounded-full font-bold uppercase hover:bg-[#CB2E50] transition">AGENDAR COLETA</a>
           </div>
           <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -66,7 +66,7 @@ export default function App() {
               Sua aliada para você <span className="text-[#846CAD]">aproveitar as coisas boas da vida</span>
             </h1>
             <p className="text-xl text-stone-600 mb-8">
-              A Lava aky lavanderia nasceu para transformar a rotina doméstica em uma experiência ágil e eficiente. Localizada no centro de Pelotas, oferecemos um sistema híbrido, onde você poderá utilizar nosso serviço de 3 maneiras: autoatendimento completo e intuitivo, serviço de atendente ou delivery. Nossas máquinas profissionais garantem uma limpeza profunda e secagem rápida, economizando água, energia e, principalmente, o seu tempo. Ambiente climatizado, Wi-Fi gratuito, Alexa e higiene rigorosa.
+              A <span className="font-chocolate">Lava aky</span> lavanderia nasceu para transformar a rotina doméstica em uma experiência ágil e eficiente. Localizada no centro de Pelotas, oferecemos um sistema híbrido, onde você poderá utilizar nosso serviço de 3 maneiras: autoatendimento completo e intuitivo, serviço de atendente ou delivery. Nossas máquinas profissionais garantem uma limpeza profunda e secagem rápida, economizando água, energia e, principalmente, o seu tempo. Ambiente climatizado, Wi-Fi gratuito, Alexa e higiene rigorosa.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="https://wa.me/5553991222096" className="bg-[#846CAD] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#CB2E50] transition shadow-lg">
@@ -158,7 +158,7 @@ export default function App() {
       <section id="valores-delivery" className="py-16 bg-[#F5F3F7] text-stone-900">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-8 text-[#846CAD]">CONVÊNIOS COM CONDOMÍNIOS</h2>
-          <p className="text-xl mb-12 text-stone-700">Leve a praticidade da Lava aky para o seu condomínio! Oferecemos condições especiais e um serviço de delivery exclusivo para moradores.</p>
+          <p className="text-xl mb-12 text-stone-700">Leve a praticidade da <span className="font-chocolate">Lava aky</span> para o seu condomínio! Oferecemos condições especiais e um serviço de delivery exclusivo para moradores.</p>
           
           <div className="bg-[#846CAD] text-white p-8 rounded-3xl mb-12 inline-block shadow-xl">
             <p className="text-xl font-bold">LAVE OU SEQUE</p>
@@ -175,7 +175,7 @@ export default function App() {
             <p>• Lavagem expressa com todo cuidado e agilidade</p>
           </div>
 
-          <h3 className="text-3xl font-bold mb-8 text-[#846CAD]">EM CASA X LAVA AKY</h3>
+          <h3 className="text-3xl font-bold mb-8 text-[#846CAD]">EM CASA X <span className="font-chocolate">LAVA AKY</span></h3>
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
             <div className="bg-white text-stone-900 p-8 rounded-3xl w-full md:w-64 shadow-lg border border-stone-200">
               <p className="font-bold text-xl mb-4">EM CASA</p>
@@ -189,7 +189,7 @@ export default function App() {
             </div>
             <span className="text-4xl font-bold text-[#846CAD]">X</span>
             <div className="bg-[#CB2E50] text-white p-8 rounded-3xl w-full md:w-64 shadow-lg">
-              <p className="font-bold text-xl mb-4">LAVA AKY</p>
+              <p className="font-bold text-xl mb-4"><span className="font-chocolate">LAVA AKY</span></p>
               <p className="font-bold text-lg">tudo incluso no valor</p>
             </div>
           </div>
@@ -217,7 +217,7 @@ export default function App() {
           <div>
             <h2 className="text-4xl font-bold mb-6 text-[#846CAD]">O Retorno do Tempo: Seu recurso mais valioso.</h2>
             <p className="text-lg text-stone-700 mb-4"><strong>Em Casa:</strong> 3 a 5 horas perdidas por semana com o ciclo interminável de separar, lavar, estender, esperar secar, recolher e passar.</p>
-            <p className="text-lg text-stone-700"><strong>Solução Lava aky:</strong> Apenas 1 a 1,5 hora total. Lavagem rápida, secagem eficiente e roupas prontas para uso.</p>
+            <p className="text-lg text-stone-700"><strong>Solução <span className="font-chocolate">Lava aky</span>:</strong> Apenas 1 a 1,5 hora total. Lavagem rápida, secagem eficiente e roupas prontas para uso.</p>
             <div className="mt-6 p-4 bg-[#F29593]/20 rounded-xl border border-[#F29593]">
               <p className="font-semibold text-[#CB2E50]">O calor da secadora profissional elimina a necessidade de passar a maioria das roupas. É só dobrar e guardar!</p>
             </div>
@@ -230,7 +230,7 @@ export default function App() {
                 <span className="font-bold text-[#CB2E50]">R$ 170 - R$ 300</span>
               </div>
               <div className="flex justify-between items-center border-b pb-2">
-                <span>Na Lava aky (custo/mês)</span>
+                <span>Na <span className="font-chocolate">Lava aky</span> (custo/mês)</span>
                 <span className="font-bold text-[#846CAD]">~ R$ 144</span>
               </div>
             </div>
@@ -239,14 +239,14 @@ export default function App() {
 
         {/* Grade de Planos */}
         <section id="planos">
-          <h2 className="text-4xl font-bold text-center mb-4 text-[#846CAD]">PLANOS E PACOTES LAVA AKY</h2>
+          <h2 className="text-4xl font-bold text-center mb-4 text-[#846CAD]">PLANOS E PACOTES <span className="font-chocolate">LAVA AKY</span></h2>
           <p className="text-center text-xl font-semibold text-stone-800 mb-6">Rotina leve, bolso cheio.</p>
           <p className="text-center text-stone-600 mb-12 max-w-3xl mx-auto">
-            A Lava aky não é apenas uma lavanderia de autoatendimento, nós entregamos praticidade no seu dia-a-dia, economia e uma experiência que transformadora ao de cuidar das suas roupas.
+            A <span className="font-chocolate">Lava aky</span> não é apenas uma lavanderia de autoatendimento, nós entregamos praticidade no seu dia-a-dia, economia e uma experiência que transformadora ao de cuidar das suas roupas.
             <br /><br />
             Oferecemos Pacotes de Uso, buscando o máximo de conveniência e o melhor custo-benefício. Você pode lavar e secar seus cestos de roupa com descontos progressivos, garantindo o cuidado com suas roupas.
             <br /><br />
-            Venha para Lava aky Lavanderia e escolha o pacote ideal para manter suas roupas sempre em dia!
+            Venha para <span className="font-chocolate">Lava aky</span> Lavanderia e escolha o pacote ideal para manter suas roupas sempre em dia!
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -268,8 +268,8 @@ export default function App() {
 
         {/* Seção B2B */}
         <section id="b2b" className="bg-[#846CAD] text-white p-12 rounded-3xl">
-          <h2 className="text-4xl font-bold mb-6 text-center">PLANOS E PACOTES LAVA AKY PARA CNPJ</h2>
-          <p className="text-lg mb-12 text-center max-w-2xl mx-auto">A Lava aky tem uma solução para todo tipo de negócio.</p>
+          <h2 className="text-4xl font-bold mb-6 text-center">PLANOS E PACOTES <span className="font-chocolate">LAVA AKY</span> PARA CNPJ</h2>
+          <p className="text-lg mb-12 text-center max-w-2xl mx-auto">A <span className="font-chocolate">Lava aky</span> tem uma solução para todo tipo de negócio.</p>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { title: 'Hospedagem (Hotéis e Airbnbs)', desc: 'Para o cuidado constante com roupas de cama, mesa e banho.' },
@@ -373,8 +373,8 @@ export default function App() {
             <div>
               <h3 className="text-3xl font-bold mb-6">Baixe nosso aplicativo e aproveite!</h3>
               <p className="text-lg mb-8">Tenha acesso a todos os benefícios, acompanhe seu cashback e agende serviços na palma da sua mão.</p>
-              <a href="#" className="inline-block bg-[#E2BA59] text-stone-900 px-10 py-4 rounded-full text-xl font-bold hover:bg-white transition shadow-lg">
-                Baixar Aplicativo Lava aky
+              <a href="https://play.google.com/store/apps/details?id=com.begin.laundway&pcampaignid=web_share" className="inline-block bg-[#E2BA59] text-stone-900 px-10 py-4 rounded-full text-xl font-bold hover:bg-white transition shadow-lg">
+                Baixar Aplicativo <span className="font-chocolate">Lava aky</span>
               </a>
             </div>
             <div className="flex justify-center">
@@ -396,7 +396,7 @@ export default function App() {
             <h2 className="text-4xl font-bold mb-6">Clube de Fidelidade e Mimos</h2>
             <p className="text-lg mb-8">A cada 10 ciclos completos, ganhe 1 secagem. A cada 20 ciclos, ganhe 1 BAG exclusiva.</p>
             <div className="p-6 bg-white/10 rounded-xl border border-white/20">
-              <p className="font-bold text-xl">🎁 Presente de Aniversário: No seu mês, a Lava aky reserva um presente especial para você!</p>
+              <p className="font-bold text-xl">🎁 Presente de Aniversário: No seu mês, a <span className="font-chocolate">Lava aky</span> reserva um presente especial para você!</p>
             </div>
           </div>
           <div className="bg-white p-4 rounded-3xl shadow-2xl border border-stone-100">
@@ -412,13 +412,13 @@ export default function App() {
         </section>
         {/* Unidade Section */}
         <section id="unidades" className="py-16 bg-white rounded-3xl shadow-lg border border-stone-100 p-8">
-          <h2 className="text-4xl font-bold text-center mb-12 text-[#846CAD]">Nossa Unidade</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-[#846CAD]">Nosso Local</h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-4">
               <p className="text-lg font-semibold text-stone-800">Endereço: R. Andrade Neves, 3061 - Centro, Pelotas - RS, 96020-080</p>
               <p className="text-lg font-semibold text-stone-800">Telefone: (53) 99122-2096</p>
               <a 
-                href="https://www.google.com/maps/dir/?api=1&destination=R.+Andrade+Neves,+3061+-+Centro,+Pelotas+-+RS,+96020-080" 
+                href="https://www.google.com/maps/place/Lava+aky+%7C+Lavanderia+de+Autoatendimento+%7C+Centro+%7C+Pelotas%2FRS/@-31.7572458,-52.3379421,17z/data=!3m1!4b1!4m6!3m5!1s0x9511b50026d72ab5:0x4038efbc49c08a6c!8m2!31.7572458!4d-52.3379421!16s%2Fg%2F11vr1sv99b?hl=pt-BR&entry=ttu&g_ep=EgoyMDI2MDMwMi4wIKXMDSoASAFQAw%3D%3D" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-block bg-[#846CAD] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#CB2E50] transition"
@@ -472,13 +472,14 @@ export default function App() {
           <div>
             <h3 className="text-xl font-bold mb-4">Redes Sociais</h3>
             <div className="flex gap-4">
-              <Instagram />
-              <Facebook />
+              <a href="https://www.instagram.com/lavaaky" target="_blank" rel="noopener noreferrer"><Instagram /></a>
+              <a href="https://www.facebook.com/lavaaky" target="_blank" rel="noopener noreferrer"><Facebook /></a>
             </div>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Contato</h3>
             <p className="flex items-center gap-2 font-bold"><Phone size={18}/> 53 99122-2096</p>
+            <p className="flex items-center gap-2 mt-2 font-bold"><a href="mailto:lava.aky@gmail.com">lava.aky@gmail.com</a></p>
           </div>
         </div>
       </footer>
