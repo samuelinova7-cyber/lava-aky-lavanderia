@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "OPTIAkrogroteskBold-Cond Regular", ui-sans-serif, system-ui, sans-serif;
-  --font-chocolate: "Chocolate", cursive;
+  --font-sans: "Malvie", ui-sans-serif, system-ui, sans-serif;
+  --font-chocolate: "Malvie", cursive;
 }

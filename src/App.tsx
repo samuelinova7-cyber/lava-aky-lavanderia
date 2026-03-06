@@ -16,7 +16,7 @@ export default function App() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-stone-200">
         <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20132651.png" alt="Lava aky Logo" className="h-10" referrerPolicy="no-referrer" />
+            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20132651.png" alt="<span className='font-chocolate'>Lava aky</span> Logo" className="h-10" referrerPolicy="no-referrer" />
             <div className="text-xl font-bold text-[#846CAD]"><span className="font-chocolate">LAVA AKY</span> Lavanderia de Autoatendimento</div>
           </div>
           <div className="hidden md:flex items-center gap-6">
@@ -429,7 +429,7 @@ export default function App() {
             <div className="w-full space-y-4">
               <img 
                 src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20133749.png" 
-                alt="Localização Lava aky" 
+                alt="Localização <span className='font-chocolate'>Lava aky</span>" 
                 className="w-full rounded-2xl shadow-inner"
                 referrerPolicy="no-referrer"
               />
@@ -465,7 +465,7 @@ export default function App() {
         {/* Footer Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 items-center text-white">
           <div>
-            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20132651.png" alt="Lava aky Logo" className="h-16 mb-4" referrerPolicy="no-referrer" />
+            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20132651.png" alt="<span className='font-chocolate'>Lava aky</span> Logo" className="h-16 mb-4" referrerPolicy="no-referrer" />
             <p className="flex items-center gap-2 font-bold"><MapPin size={18}/> Rua Andrade Neves, 3061 - Pelotas/RS</p>
             <p className="flex items-center gap-2 mt-2 font-bold"><Clock size={18}/> 07h às 22h</p>
           </div>
