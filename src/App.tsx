@@ -16,8 +16,8 @@ export default function App() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-stone-200">
         <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20132651.png" alt="<span className='font-chocolate'>Lava aky</span> Logo" className="h-10" referrerPolicy="no-referrer" />
-            <div className="text-xl font-bold text-[#846CAD]"><span className="font-chocolate">LAVA AKY</span> Lavanderia de Autoatendimento</div>
+            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20132651.png" alt="<span className='font-chocolate'>Lava Aky</span> Logo" className="h-10" referrerPolicy="no-referrer" />
+            <div className="text-xl font-bold text-[#846CAD]"><span className="font-chocolate">Lava Aky</span> Lavanderia de Autoatendimento</div>
           </div>
           <div className="hidden md:flex items-center gap-6">
             <a href="#planos" className="text-stone-700 hover:text-[#CB2E50] font-bold uppercase">PLANOS</a>
@@ -66,7 +66,7 @@ export default function App() {
               Sua aliada para você <span className="text-[#846CAD]">aproveitar as coisas boas da vida</span>
             </h1>
             <p className="text-xl text-stone-600 mb-8">
-              A <span className="font-chocolate">Lava aky</span> lavanderia nasceu para transformar a rotina doméstica em uma experiência ágil e eficiente. Localizada no centro de Pelotas, oferecemos um sistema híbrido, onde você poderá utilizar nosso serviço de 3 maneiras: autoatendimento completo e intuitivo, serviço de atendente ou delivery. Nossas máquinas profissionais garantem uma limpeza profunda e secagem rápida, economizando água, energia e, principalmente, o seu tempo. Ambiente climatizado, Wi-Fi gratuito, Alexa e higiene rigorosa.
+              A <span className="font-chocolate">Lava Aky</span> lavanderia nasceu para transformar a rotina doméstica em uma experiência ágil e eficiente. Localizada no centro de Pelotas, oferecemos um sistema híbrido, onde você poderá utilizar nosso serviço de 3 maneiras: autoatendimento completo e intuitivo, serviço de atendente ou delivery. Nossas máquinas profissionais garantem uma limpeza profunda e secagem rápida, economizando água, energia e, principalmente, o seu tempo. Ambiente climatizado, Wi-Fi gratuito, Alexa e higiene rigorosa.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="https://wa.me/5553991222096" className="bg-[#846CAD] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#CB2E50] transition shadow-lg">
@@ -158,7 +158,7 @@ export default function App() {
       <section id="valores-delivery" className="py-16 bg-[#F5F3F7] text-stone-900">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-8 text-[#846CAD]">CONVÊNIOS COM CONDOMÍNIOS</h2>
-          <p className="text-xl mb-12 text-stone-700">Leve a praticidade da <span className="font-chocolate">Lava aky</span> para o seu condomínio! Oferecemos condições especiais e um serviço de delivery exclusivo para moradores.</p>
+          <p className="text-xl mb-12 text-stone-700">Leve a praticidade da <span className="font-chocolate">Lava Aky</span> para o seu condomínio! Oferecemos condições especiais e um serviço de delivery exclusivo para moradores.</p>
           
           <div className="bg-[#846CAD] text-white p-8 rounded-3xl mb-12 inline-block shadow-xl">
             <p className="text-xl font-bold">LAVE OU SEQUE</p>
@@ -175,7 +175,7 @@ export default function App() {
             <p>• Lavagem expressa com todo cuidado e agilidade</p>
           </div>
 
-          <h3 className="text-3xl font-bold mb-8 text-[#846CAD]">EM CASA X <span className="font-chocolate">LAVA AKY</span></h3>
+          <h3 className="text-3xl font-bold mb-8 text-[#846CAD]">EM CASA X <span className="font-chocolate">Lava Aky</span></h3>
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
             <div className="bg-white text-stone-900 p-8 rounded-3xl w-full md:w-64 shadow-lg border border-stone-200">
               <p className="font-bold text-xl mb-4">EM CASA</p>
@@ -189,7 +189,7 @@ export default function App() {
             </div>
             <span className="text-4xl font-bold text-[#846CAD]">X</span>
             <div className="bg-[#CB2E50] text-white p-8 rounded-3xl w-full md:w-64 shadow-lg">
-              <p className="font-bold text-xl mb-4"><span className="font-chocolate">LAVA AKY</span></p>
+              <p className="font-bold text-xl mb-4"><span className="font-chocolate">Lava Aky</span></p>
               <p className="font-bold text-lg">tudo incluso no valor</p>
             </div>
           </div>
@@ -217,7 +217,7 @@ export default function App() {
           <div>
             <h2 className="text-4xl font-bold mb-6 text-[#846CAD]">O Retorno do Tempo: Seu recurso mais valioso.</h2>
             <p className="text-lg text-stone-700 mb-4"><strong>Em Casa:</strong> 3 a 5 horas perdidas por semana com o ciclo interminável de separar, lavar, estender, esperar secar, recolher e passar.</p>
-            <p className="text-lg text-stone-700"><strong>Solução <span className="font-chocolate">Lava aky</span>:</strong> Apenas 1 a 1,5 hora total. Lavagem rápida, secagem eficiente e roupas prontas para uso.</p>
+            <p className="text-lg text-stone-700"><strong>Solução <span className="font-chocolate">Lava Aky</span>:</strong> Apenas 1 a 1,5 hora total. Lavagem rápida, secagem eficiente e roupas prontas para uso.</p>
             <div className="mt-6 p-4 bg-[#F29593]/20 rounded-xl border border-[#F29593]">
               <p className="font-semibold text-[#CB2E50]">O calor da secadora profissional elimina a necessidade de passar a maioria das roupas. É só dobrar e guardar!</p>
             </div>
@@ -230,7 +230,7 @@ export default function App() {
                 <span className="font-bold text-[#CB2E50]">R$ 170 - R$ 300</span>
               </div>
               <div className="flex justify-between items-center border-b pb-2">
-                <span>Na <span className="font-chocolate">Lava aky</span> (custo/mês)</span>
+                <span>Na <span className="font-chocolate">Lava Aky</span> (custo/mês)</span>
                 <span className="font-bold text-[#846CAD]">~ R$ 144</span>
               </div>
             </div>
@@ -239,14 +239,14 @@ export default function App() {
 
         {/* Grade de Planos */}
         <section id="planos">
-          <h2 className="text-4xl font-bold text-center mb-4 text-[#846CAD]">PLANOS E PACOTES <span className="font-chocolate">LAVA AKY</span></h2>
+          <h2 className="text-4xl font-bold text-center mb-4 text-[#846CAD]">PLANOS E PACOTES <span className="font-chocolate">Lava Aky</span></h2>
           <p className="text-center text-xl font-semibold text-stone-800 mb-6">Rotina leve, bolso cheio.</p>
           <p className="text-center text-stone-600 mb-12 max-w-3xl mx-auto">
-            A <span className="font-chocolate">Lava aky</span> não é apenas uma lavanderia de autoatendimento, nós entregamos praticidade no seu dia-a-dia, economia e uma experiência que transformadora ao de cuidar das suas roupas.
+            A <span className="font-chocolate">Lava Aky</span> não é apenas uma lavanderia de autoatendimento, nós entregamos praticidade no seu dia-a-dia, economia e uma experiência que transformadora ao de cuidar das suas roupas.
             <br /><br />
             Oferecemos Pacotes de Uso, buscando o máximo de conveniência e o melhor custo-benefício. Você pode lavar e secar seus cestos de roupa com descontos progressivos, garantindo o cuidado com suas roupas.
             <br /><br />
-            Venha para <span className="font-chocolate">Lava aky</span> Lavanderia e escolha o pacote ideal para manter suas roupas sempre em dia!
+            Venha para <span className="font-chocolate">Lava Aky</span> Lavanderia e escolha o pacote ideal para manter suas roupas sempre em dia!
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -268,8 +268,8 @@ export default function App() {
 
         {/* Seção B2B */}
         <section id="b2b" className="bg-[#846CAD] text-white p-12 rounded-3xl">
-          <h2 className="text-4xl font-bold mb-6 text-center">PLANOS E PACOTES <span className="font-chocolate">LAVA AKY</span> PARA CNPJ</h2>
-          <p className="text-lg mb-12 text-center max-w-2xl mx-auto">A <span className="font-chocolate">Lava aky</span> tem uma solução para todo tipo de negócio.</p>
+          <h2 className="text-4xl font-bold mb-6 text-center">PLANOS E PACOTES <span className="font-chocolate">Lava Aky</span> PARA CNPJ</h2>
+          <p className="text-lg mb-12 text-center max-w-2xl mx-auto">A <span className="font-chocolate">Lava Aky</span> tem uma solução para todo tipo de negócio.</p>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { title: 'Hospedagem (Hotéis e Airbnbs)', desc: 'Para o cuidado constante com roupas de cama, mesa e banho.' },
@@ -374,7 +374,7 @@ export default function App() {
               <h3 className="text-3xl font-bold mb-6">Baixe nosso aplicativo e aproveite!</h3>
               <p className="text-lg mb-8">Tenha acesso a todos os benefícios, acompanhe seu cashback e agende serviços na palma da sua mão.</p>
               <a href="https://play.google.com/store/apps/details?id=com.begin.laundway&pcampaignid=web_share" className="inline-block bg-[#E2BA59] text-stone-900 px-10 py-4 rounded-full text-xl font-bold hover:bg-white transition shadow-lg">
-                Baixar Aplicativo <span className="font-chocolate">Lava aky</span>
+                Baixar Aplicativo <span className="font-chocolate">Lava Aky</span>
               </a>
             </div>
             <div className="flex justify-center">
@@ -396,7 +396,7 @@ export default function App() {
             <h2 className="text-4xl font-bold mb-6">Clube de Fidelidade e Mimos</h2>
             <p className="text-lg mb-8">A cada 10 ciclos completos, ganhe 1 secagem. A cada 20 ciclos, ganhe 1 BAG exclusiva.</p>
             <div className="p-6 bg-white/10 rounded-xl border border-white/20">
-              <p className="font-bold text-xl">🎁 Presente de Aniversário: No seu mês, a <span className="font-chocolate">Lava aky</span> reserva um presente especial para você!</p>
+              <p className="font-bold text-xl">🎁 Presente de Aniversário: No seu mês, a <span className="font-chocolate">Lava Aky</span> reserva um presente especial para você!</p>
             </div>
           </div>
           <div className="bg-white p-4 rounded-3xl shadow-2xl border border-stone-100">
@@ -429,7 +429,7 @@ export default function App() {
             <div className="w-full space-y-4">
               <img 
                 src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20133749.png" 
-                alt="Localização <span className='font-chocolate'>Lava aky</span>" 
+                alt="Localização <span className='font-chocolate'>Lava Aky</span>" 
                 className="w-full rounded-2xl shadow-inner"
                 referrerPolicy="no-referrer"
               />
@@ -465,7 +465,7 @@ export default function App() {
         {/* Footer Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 items-center text-white">
           <div>
-            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20132651.png" alt="<span className='font-chocolate'>Lava aky</span> Logo" className="h-16 mb-4" referrerPolicy="no-referrer" />
+            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20132651.png" alt="<span className='font-chocolate'>Lava Aky</span> Logo" className="h-16 mb-4" referrerPolicy="no-referrer" />
             <p className="flex items-center gap-2 font-bold"><MapPin size={18}/> Rua Andrade Neves, 3061 - Pelotas/RS</p>
             <p className="flex items-center gap-2 mt-2 font-bold"><Clock size={18}/> 07h às 22h</p>
           </div>
