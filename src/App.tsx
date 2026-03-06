@@ -184,16 +184,18 @@ export default function App() {
         </div>
       </section>
 
-      {/* Matemática Real */}
-      <section id="matematica-real" className="py-16 bg-stone-100">
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-[#846CAD]">A Matemática Real: O custo oculto da sua área de serviço</h2>
-          <img 
-            src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/matematica-real.png" 
-            alt="A Matemática Real" 
-            className="w-full rounded-3xl shadow-xl"
+      {/* Instagram Post */}
+      <section id="instagram-post" className="py-8 bg-stone-100">
+        <div className="max-w-5xl mx-auto px-4 flex justify-center">
+          <iframe 
+            src="https://www.instagram.com/reel/C7RSiUqgG3t/embed/" 
+            width="400" 
+            height="480" 
+            frameBorder="0" 
+            scrolling="no" 
+            allowTransparency={true}
             referrerPolicy="no-referrer"
-          />
+          ></iframe>
         </div>
       </section>
 
@@ -269,6 +271,54 @@ export default function App() {
                 <p className="text-stone-300">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Clube de Fidelidade */}
+        <section id="deixa-aky" className="bg-stone-100 p-12 rounded-3xl border border-stone-200">
+          <h2 className="text-4xl font-bold mb-8 text-[#846CAD]">🧺 Serviço "Deixa aky"</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Como funciona (Passo a Passo)</h3>
+              <ul className="space-y-2 text-stone-700">
+                <li>• <strong>Medição:</strong> Coloque as roupas no cesto de medida para saber de quantos ciclos você precisará.</li>
+                <li>• <strong>Depósito:</strong> Coloque as roupas dentro do armário disponível.</li>
+                <li>• <strong>Segurança:</strong> Tranque o armário e leve a chave com você.</li>
+                <li>• <strong>Notificação:</strong> Envie uma mensagem para o WhatsApp da empresa com seu CPF, Nome e Número do armário.</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-2xl font-bold mb-4">✅ O que acontece depois</h3>
+              <ul className="space-y-2 text-stone-700 mb-6">
+                <li>• A equipe executará o serviço contratado (lavar e secar).</li>
+                <li>• Assim que as roupas estiverem limpas e dobradas, você receberá um aviso no WhatsApp.</li>
+                <li>• Volte ao mesmo armário e use sua chave para retirar as roupas.</li>
+                <li>• <strong>Dúvidas?</strong> Entre em contato pelo telefone: (53) 99122-2096.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mt-8">
+            <div className="bg-white p-6 rounded-2xl border border-stone-200">
+              <h3 className="text-xl font-bold mb-4">🕒 Horários e Prazos</h3>
+              <ul className="space-y-1 text-stone-700">
+                <li>• Segunda a Quinta-Feira: 07:00 às 22:00</li>
+                <li>• Sexta-feira: 07:00 às 13:00</li>
+                <li>• Sábado e Domingo: <strong>NÃO funciona</strong></li>
+                <li>• <strong>Prazo de Entrega:</strong> 1 dia útil (24 horas)</li>
+                <li className="text-sm text-stone-500 mt-2">* A retirada deve ser feita no mesmo dia em que você receber o aviso no WhatsApp.</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white p-6 rounded-2xl border border-stone-200">
+              <h3 className="text-xl font-bold mb-4">💰 Custos e Pagamento</h3>
+              <ul className="space-y-1 text-stone-700">
+                <li>• <strong>Valor:</strong> R$ 10,00 por cesto medida.</li>
+                <li>• <strong>Forma de Pagamento:</strong> Via Pix (chave e-mail: lava.aky@gmail.com).</li>
+              </ul>
+            </div>
           </div>
         </section>
 
