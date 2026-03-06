@@ -48,7 +48,7 @@ export default function App() {
                 muted
                 playsInline
                 className="w-full h-auto rounded-2xl"
-                src="https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/grok-video-a7e6f9ad-aa7d-4a83-928f-72ac936ace74.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvZ3Jvay12aWRlby1hN2U2ZjlhZC1hYTdkLTRhODMtOTI4Zi03MmFjOTM2YWNlNzQubXA0IiwiaWF0IjoxNzcyNzU4MDc2LCJleHAiOjIwNTY1ODIwNzZ9.yUwq3rewcUU5zZKqaIQz-5SbOSVaBFMwzTdd7G47dnk"
+                src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-698df21a-6d22-4040-88d4-05cb8a59cbae.mp4"
               />
             </div>
           </motion.div>
@@ -63,10 +63,10 @@ export default function App() {
               • Tecnologia profissional • Cuidado especializado
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-stone-900 leading-tight">
-              Roupas impecáveis e <span className="text-[#846CAD]">mais tempo para você</span> na Lava aky!
+              Sua aliada para você <span className="text-[#846CAD]">aproveitar as coisas boas da vida</span>
             </h1>
             <p className="text-xl text-stone-600 mb-8">
-              A Lava aky não é apenas uma lavanderia de autoatendimento; entregamos praticidade, economia e uma experiência transformadora no cuidado com as suas roupas.
+              A Lava aky lavanderia nasceu para transformar a rotina doméstica em uma experiência ágil e eficiente. Localizada no centro de Pelotas, oferecemos um sistema híbrido, onde você poderá utilizar nosso serviço de 3 maneiras: autoatendimento completo e intuitivo, serviço de atendente ou delivery. Nossas máquinas profissionais garantem uma limpeza profunda e secagem rápida, economizando água, energia e, principalmente, o seu tempo. Ambiente climatizado, Wi-Fi gratuito, Alexa e higiene rigorosa.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="https://wa.me/5553991222096" className="bg-[#846CAD] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#CB2E50] transition shadow-lg">
@@ -81,34 +81,53 @@ export default function App() {
       </section>
 
       {/* Prova Social */}
-      <section id="depoimentos" className="bg-stone-900 text-white p-12 rounded-3xl max-w-7xl mx-auto my-16">
-        <h2 className="text-4xl font-bold text-center mb-4">Quem confia, recomenda.</h2>
-        <p className="text-center text-stone-400 mb-12">Avaliação 5 estrelas no Google</p>
-        
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {[
-            { nome: 'Janaina Redü', texto: 'Os edredons foram entregues impecáveis pareciam ser novos. E o perfume ficou dentro do carro, muito bom.' },
-            { nome: 'Gabriela Marini', texto: 'Serviço rápido, bem feito, preço justo. Lavamos dois cobertores de casal super grossos e ficaram limpíssimos e cheirosos.' },
-            { nome: 'Cristian Rafael Campos', texto: 'Melhor da cidade! Atendimento excelente, produtos da melhor qualidade e preço muito barato.' },
-          ].map((depoimento, index) => (
-            <div key={index} className="bg-stone-800 p-8 rounded-2xl border border-stone-700">
-              <div className="flex text-[#E2BA59] mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
-              </div>
-              <p className="text-stone-300 italic mb-6">"{depoimento.texto}"</p>
-              <p className="font-bold text-white mb-1">{depoimento.nome}</p>
-              <a href="https://www.google.com/search?q=Lava+aky+Pelotas" target="_blank" rel="noopener noreferrer" className="text-sm text-[#846CAD] hover:underline">Avaliação no Google</a>
-            </div>
-          ))}
+      <section id="depoimentos" className="relative py-16 overflow-hidden text-white my-16">
+        {/* Video Background */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover filter blur-sm"
+            src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-794ef6cd-e378-40b7-a396-dda96875316c.mp4"
+          />
+          <div className="absolute inset-0 bg-[#846CAD]/90"></div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-          <a href="https://www.google.com/search?q=Lava+aky+Pelotas" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white text-stone-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-stone-200 transition shadow-lg">
-            <Star size={20} fill="currentColor" /> Deixar avaliação no Google
-          </a>
-          <a href="https://www.google.com/search?q=Lava+aky+Pelotas" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-[#846CAD] hover:underline">
-            Ver todas as avaliações →
-          </a>
+        <div className="relative z-10 max-w-7xl mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-4">Quem confia, recomenda.</h2>
+          <p className="text-center text-stone-200 mb-12">Avaliação 5 estrelas no Google</p>
+          
+          <div className="overflow-x-auto flex gap-6 px-4 pb-8 snap-x">
+            {[
+              { nome: 'Janaina Redü', texto: 'A lavanderia está instalada em um local estratégico, bom para estacionar, tranquilo muito limpo. E os edredons foram entregues impecáveis pareciam ser novos.' },
+              { nome: 'delta civil-DIEGO', texto: 'Excepcional o atendimento do pessoal tanto via telefone como pelo whatsapp. Super indico eles. Parabéns pelo profissionalismo e rapidez na entrega' },
+              { nome: 'Gabriela Marini', texto: 'Muito bom! Serviço rápido, bem feito, preço justo. Lavamos dois cobertores de casal super grossos e ficaram limpíssimos e cheirosos.' },
+              { nome: 'luiza maronn', texto: 'Excelente atendimento. Muito atenciosos com as roupas e cobertores que deixamos lá. Fui lá nessa tarde lavar um edredom tamanho quenn. Sem explicações para o quão cheiroso e limpinho ele ficou.' },
+              { nome: 'Alessandro Marques', texto: 'Serviço incrível, agilidade e qualidade definem!!! Cliente fidelizado aqui…' },
+              { nome: 'Bruna Garcia', texto: 'Ótimo e rápido atendimento! Utilizei o serviço da lavanderia para lavagem de um cobertor, o item foi recolhido e entregue na minha casa.' },
+              { nome: 'Alberto Langhinrichs', texto: 'Excelente atendimento e serviço de ótima qualidade. Lavei minhas roupas e um cobertor pesado com ótimo preço e muito bem atendido.' },
+              { nome: 'Cristian Rafael Campos', texto: 'Melhor da cidade, simplesmente isso! Atendimento excelente, produtos da melhor qualidade que fica um cheiro maravilhoso.' },
+              { nome: 'Lucas Faria', texto: 'É a melhor lavanderia de pelotas, local de fácil localização, máquinas novas e eficientes, excelente espaço de espera e preço excelente !!!!!' },
+              { nome: 'Lais Demarco', texto: 'Ótimo atendimento, nunca tinha utilizado esse tipo de serviço de auto atendimento e a moça me chamou no wpp e me deu todo suporte, super educada e atenciosa.' },
+              { nome: 'Natalie Griep', texto: 'Amei o serviço, impecável! Roupa cheirosinha e divida, só coloquei nos guarda-roupas 😅 amei!' },
+            ].map((depoimento, index) => (
+              <div key={index} className="bg-white text-stone-800 p-8 rounded-3xl shadow-lg min-w-[300px] max-w-[300px] snap-center">
+                <div className="flex text-[#E2BA59] mb-4">
+                  {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
+                </div>
+                <p className="text-stone-600 italic mb-6">"{depoimento.texto}"</p>
+                <p className="font-bold text-stone-900 mb-1">{depoimento.nome}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12">
+            <a href="https://www.google.com/search?q=Lava+aky+Pelotas" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white text-stone-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-stone-200 transition shadow-lg">
+              <Star size={20} fill="currentColor" /> Deixar avaliação no Google
+            </a>
+          </div>
         </div>
       </section>
 
@@ -136,66 +155,48 @@ export default function App() {
       </section>
 
       {/* Valores e Delivery */}
-      <section id="valores-delivery" className="py-16 bg-stone-900 text-white">
+      <section id="valores-delivery" className="py-16 bg-[#F5F3F7] text-stone-900">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-8">VALORES E DELIVERY</h2>
-          <div className="bg-[#E2BA59] text-stone-900 p-8 rounded-3xl mb-12 inline-block">
+          <h2 className="text-4xl font-bold mb-8 text-[#846CAD]">CONVÊNIOS COM CONDOMÍNIOS</h2>
+          <p className="text-xl mb-12 text-stone-700">Leve a praticidade da Lava aky para o seu condomínio! Oferecemos condições especiais e um serviço de delivery exclusivo para moradores.</p>
+          
+          <div className="bg-[#846CAD] text-white p-8 rounded-3xl mb-12 inline-block shadow-xl">
             <p className="text-xl font-bold">LAVE OU SEQUE</p>
             <p className="text-lg">Por Apenas</p>
             <p className="text-6xl font-bold">R$ 17,98</p>
           </div>
           
-          <div className="space-y-4 mb-12 text-lg">
-            <p>👉 Vantagens exclusivas:</p>
-            <p>• Acima de 4 clientes, o DELIVERY É GRATUITO 🚚</p>
+          <div className="space-y-4 mb-12 text-lg text-stone-700 bg-white p-8 rounded-3xl shadow-lg border border-[#846CAD]/20">
+            <p className="font-bold text-[#846CAD]">👉 Vantagens exclusivas para Condomínios:</p>
+            <p>• Coleta e entrega programada no seu condomínio 🚚</p>
             <p>• Serviço de dobragem como BRINDE 🩳</p>
             <p>• Retiradas sempre às segundas e quintas-feiras</p>
             <p>• Entrega em até 24h após a coleta ⚡</p>
             <p>• Lavagem expressa com todo cuidado e agilidade</p>
           </div>
 
-          <h3 className="text-3xl font-bold mb-8">EM CASA X LAVA AKY</h3>
+          <h3 className="text-3xl font-bold mb-8 text-[#846CAD]">EM CASA X LAVA AKY</h3>
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
-            <div className="bg-white text-stone-900 p-8 rounded-3xl w-full md:w-64">
+            <div className="bg-white text-stone-900 p-8 rounded-3xl w-full md:w-64 shadow-lg border border-stone-200">
               <p className="font-bold text-xl mb-4">EM CASA</p>
-              <ul className="text-left space-y-2">
-                <li>• agua</li>
+              <ul className="text-left space-y-2 text-stone-600">
+                <li>• água</li>
                 <li>• luz</li>
                 <li>• estender</li>
                 <li>• passar</li>
                 <li>• produtos</li>
               </ul>
             </div>
-            <span className="text-4xl font-bold">X</span>
-            <div className="bg-white text-stone-900 p-8 rounded-3xl w-full md:w-64">
+            <span className="text-4xl font-bold text-[#846CAD]">X</span>
+            <div className="bg-[#CB2E50] text-white p-8 rounded-3xl w-full md:w-64 shadow-lg">
               <p className="font-bold text-xl mb-4">LAVA AKY</p>
               <p className="font-bold text-lg">tudo incluso no valor</p>
             </div>
           </div>
 
-          <div className="space-y-2 mb-12">
-            <p>• Você economiza água, luz e produtos 💧⚡🧴</p>
-            <p>• Não precisa se preocupar em lavar, estender, passar e dobrar 🩳</p>
-          </div>
-
           <a href="https://wa.me/5553991222096" className="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full text-2xl font-bold hover:scale-105 transition shadow-lg">
-            <MessageCircle size={32} /> 53 99122-2096
+            <MessageCircle size={32} /> Solicitar Convênio
           </a>
-        </div>
-      </section>
-
-      {/* Instagram Post */}
-      <section id="instagram-post" className="py-8 bg-stone-100">
-        <div className="max-w-5xl mx-auto px-4 flex justify-center">
-          <iframe 
-            src="https://www.instagram.com/reel/C7RSiUqgG3t/embed/" 
-            width="400" 
-            height="480" 
-            frameBorder="0" 
-            scrolling="no" 
-            allowTransparency={true}
-            referrerPolicy="no-referrer"
-          ></iframe>
         </div>
       </section>
 
@@ -203,6 +204,16 @@ export default function App() {
       <main className="max-w-7xl mx-auto px-4 py-16 space-y-24">
         {/* Infográfico de Valor */}
         <section id="valor" className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="flex justify-center">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full max-w-[400px] rounded-2xl shadow-lg"
+              src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/SnapInsta.to_AQN90fgoausIgAIwRxPxLTYRLGSx4MQgu7jJWTHuDJzPi3fFpSFf4ODUeOcEywn3V7J6ekA1QW_rHPVbiiHg90_Yw4D56kiTONfjCzI.mp4"
+            />
+          </div>
           <div>
             <h2 className="text-4xl font-bold mb-6 text-[#846CAD]">O Retorno do Tempo: Seu recurso mais valioso.</h2>
             <p className="text-lg text-stone-700 mb-4"><strong>Em Casa:</strong> 3 a 5 horas perdidas por semana com o ciclo interminável de separar, lavar, estender, esperar secar, recolher e passar.</p>
@@ -256,7 +267,7 @@ export default function App() {
         </section>
 
         {/* Seção B2B */}
-        <section id="b2b" className="bg-stone-900 text-white p-12 rounded-3xl">
+        <section id="b2b" className="bg-[#846CAD] text-white p-12 rounded-3xl">
           <h2 className="text-4xl font-bold mb-6 text-center">PLANOS E PACOTES LAVA AKY PARA CNPJ</h2>
           <p className="text-lg mb-12 text-center max-w-2xl mx-auto">A Lava aky tem uma solução para todo tipo de negócio.</p>
           <div className="grid md:grid-cols-3 gap-8">
@@ -265,10 +276,10 @@ export default function App() {
               { title: 'Serviços (Salões de Beleza e Clínicas)', desc: 'Higiene e apresentação profissional de toalhas e uniformes.' },
               { title: 'Comércios e Empresas', desc: 'Lavagem regular de uniformes de funcionários e outros itens têxteis.' },
             ].map(item => (
-              <div key={item.title} className="bg-stone-800 p-8 rounded-2xl border border-stone-700">
+              <div key={item.title} className="bg-[#9A81C2] p-8 rounded-2xl border border-[#846CAD]">
                 <CheckCircle className="text-[#E2BA59] mb-4" size={32} />
                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-stone-300">{item.desc}</p>
+                <p className="text-stone-100">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -278,6 +289,20 @@ export default function App() {
         <section id="deixa-aky" className="bg-stone-100 p-12 rounded-3xl border border-stone-200">
           <h2 className="text-4xl font-bold mb-8 text-[#846CAD]">🧺 Serviço "Deixa aky"</h2>
           
+          {/* Videos */}
+          <div className="flex flex-col md:flex-row gap-8 mb-12">
+            <video
+              controls
+              className="w-full md:w-1/2 rounded-2xl shadow-lg"
+              src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/SnapInsta.to_AQOh2tfcb2PSI3PUdJWcyLFSnLDS4G-zME4dhh2JdsA8ooQJYFP9an6ckt9l-wIQwzLXvSJ8MbuXaMl2d801DmZQTWMJcpm20rTJABU.mp4"
+            />
+            <video
+              controls
+              className="w-full md:w-1/2 rounded-2xl shadow-lg"
+              src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/SnapInsta.to_AQP4kHSsZPbuiFtdU8xe4jXfafwtt-_7RPGmJivCbqbocopJeJCBuZ73womdBq_f6J48lAi3-touiIDGETb_VtylTChG1bGVNLs857o.mp4"
+            />
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-bold mb-4">Como funciona (Passo a Passo)</h3>
@@ -318,6 +343,49 @@ export default function App() {
                 <li>• <strong>Valor:</strong> R$ 10,00 por cesto medida.</li>
                 <li>• <strong>Forma de Pagamento:</strong> Via Pix (chave e-mail: lava.aky@gmail.com).</li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Clube de Benefícios */}
+        <section id="beneficios" className="py-16 bg-stone-50">
+          <h2 className="text-4xl font-bold text-center mb-4 text-[#846CAD]">CLUBE DE BENEFÍCIOS</h2>
+          <p className="text-center text-stone-600 mb-12">Aqui você lava e ainda ganha. Vantagens exclusivas para nossos clientes.</p>
+          
+          <div className="grid md:grid-cols-4 gap-6 mb-12">
+            {[
+              { title: 'Cashback', desc: 'Quem escolhe a 2 Ciclos regularmente aproveita benefícios especiais de forma automática. Porque fidelidade merece retorno.' },
+              { title: 'Aniversariantes', desc: 'No mês do seu aniversário, você recebe um benefício exclusivo para comemorar com roupa limpa e renovada.' },
+              { title: 'Cupons', desc: 'Clientes cadastrados recebem promoções e condições especiais ao longo do ano via WhatsApp.' },
+              { title: 'Promoções', desc: 'Campanhas especiais divulgadas em nossas redes sociais e unidades.' },
+            ].map((item, index) => (
+              <div key={index} className="bg-white p-8 rounded-3xl shadow-lg border border-stone-100 text-center">
+                <div className="bg-[#846CAD]/10 text-[#846CAD] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Star size={32} />
+                </div>
+                <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+                <p className="text-stone-600 text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center bg-[#846CAD] text-white p-12 rounded-3xl">
+            <div>
+              <h3 className="text-3xl font-bold mb-6">Baixe nosso aplicativo e aproveite!</h3>
+              <p className="text-lg mb-8">Tenha acesso a todos os benefícios, acompanhe seu cashback e agende serviços na palma da sua mão.</p>
+              <a href="#" className="inline-block bg-[#E2BA59] text-stone-900 px-10 py-4 rounded-full text-xl font-bold hover:bg-white transition shadow-lg">
+                Baixar Aplicativo Lava aky
+              </a>
+            </div>
+            <div className="flex justify-center">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full max-w-[250px] aspect-[9/16] rounded-3xl shadow-2xl border-4 border-white/20"
+                src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-127bef1b-bd80-45fd-8390-59a8e72b4b12.mp4"
+              />
             </div>
           </div>
         </section>
@@ -377,58 +445,29 @@ export default function App() {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section id="faq" className="py-16">
-          <h2 className="text-4xl font-bold text-center mb-12 text-[#846CAD]">Perguntas Frequentes</h2>
-          <div className="max-w-3xl mx-auto space-y-4">
-            {[
-              { q: 'Como funciona a Lava aky?', a: 'Você traz suas roupas, utiliza nossas máquinas de alta performance e em pouco tempo tudo está limpo e seco.' },
-              { q: 'Preciso levar sabão?', a: 'Não! Nossas máquinas dosam automaticamente produtos profissionais de alta qualidade.' },
-              { q: 'Quanto tempo demora?', a: 'O ciclo completo de lavagem e secagem leva cerca de 1 hora e meia.' },
-              { q: 'Posso lavar edredons?', a: 'Sim, nossas máquinas têm capacidade para edredons de casal e king size.' },
-              { q: 'Como faço o pagamento?', a: 'Aceitamos cartões de crédito, débito e PIX.' },
-              { q: 'Tem estacionamento?', a: 'Sim, estamos em local estratégico com facilidade para estacionar.' },
-              { q: 'Posso deixar a roupa e buscar depois?', a: 'Sim, oferecemos serviço de coleta e entrega para sua comodidade.' },
-              { q: 'As máquinas são fáceis de usar?', a: 'Muito! Nossa equipe dá todo o suporte necessário e temos instruções claras no local.' },
-              { q: 'O ambiente é seguro?', a: 'Sim, nosso espaço é monitorado e seguro para sua tranquilidade.' },
-              { q: 'Vocês atendem empresas?', a: 'Sim, temos planos especiais para CNPJ, hotéis, clínicas e condomínios.' },
-            ].map((item, index) => {
-              const [isOpen, setIsOpen] = useState(false);
-              return (
-                <div key={index} className="bg-white rounded-2xl shadow border border-stone-100">
-                  <button 
-                    onClick={() => setIsOpen(!isOpen)}
-                    className="w-full flex items-center justify-between p-6 text-left font-bold text-lg text-[#846CAD]"
-                  >
-                    {item.q}
-                    {isOpen ? <ChevronUp /> : <ChevronDown />}
-                  </button>
-                  <AnimatePresence>
-                    {isOpen && (
-                      <motion.div 
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="px-6 pb-6 text-stone-600"
-                      >
-                        {item.a}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              );
-            })}
-          </div>
-        </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-stone-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 items-center">
+      <footer className="relative py-12 overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover filter blur-sm"
+            src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-794ef6cd-e378-40b7-a396-dda96875316c.mp4"
+          />
+          <div className="absolute inset-0 bg-stone-900/80"></div>
+        </div>
+
+        {/* Footer Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 items-center text-white">
           <div>
             <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20132651.png" alt="Lava aky Logo" className="h-16 mb-4" referrerPolicy="no-referrer" />
-            <p className="flex items-center gap-2"><MapPin size={18}/> Rua Andrade Neves, 3061 - Pelotas/RS</p>
-            <p className="flex items-center gap-2 mt-2"><Clock size={18}/> 07h às 22h</p>
+            <p className="flex items-center gap-2 font-bold"><MapPin size={18}/> Rua Andrade Neves, 3061 - Pelotas/RS</p>
+            <p className="flex items-center gap-2 mt-2 font-bold"><Clock size={18}/> 07h às 22h</p>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Redes Sociais</h3>
@@ -439,7 +478,7 @@ export default function App() {
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Contato</h3>
-            <p className="flex items-center gap-2"><Phone size={18}/> 53 99122-2096</p>
+            <p className="flex items-center gap-2 font-bold"><Phone size={18}/> 53 99122-2096</p>
           </div>
         </div>
       </footer>
