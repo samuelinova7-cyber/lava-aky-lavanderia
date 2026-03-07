@@ -16,7 +16,7 @@ export default function App() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-stone-200">
         <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20132651.png" alt="<span className='font-chocolate'>Lava Aky</span> Logo" className="h-10" referrerPolicy="no-referrer" />
+            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura_de_tela_2026-03-07_113951-removebg-preview.png" alt="Lava Aky Logo" className="h-10" referrerPolicy="no-referrer" />
             <div className="text-xl font-bold text-[#846CAD]"><span className="font-chocolate">Lava Aky</span> Lavanderia de Autoatendimento</div>
           </div>
           <div className="hidden md:flex items-center gap-6">
@@ -25,10 +25,53 @@ export default function App() {
             <a href="#unidades" className="text-stone-700 hover:text-[#CB2E50] font-bold uppercase">LOCAL</a>
             <a href="https://wa.me/5553991222096" className="bg-[#E2BA59] text-white px-4 py-2 rounded-full font-bold uppercase hover:bg-[#CB2E50] transition">AGENDAR COLETA</a>
           </div>
-          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X /> : <Menu />}
+          <button className="md:hidden text-[#846CAD]" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
           </button>
         </nav>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden bg-white border-t border-stone-100 overflow-hidden"
+            >
+              <div className="flex flex-col p-4 gap-4">
+                <a 
+                  href="#planos" 
+                  className="text-stone-700 hover:text-[#CB2E50] font-bold uppercase py-2 border-b border-stone-50"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  PLANOS
+                </a>
+                <a 
+                  href="#b2b" 
+                  className="text-stone-700 hover:text-[#CB2E50] font-bold uppercase py-2 border-b border-stone-50"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  CNPJ/CONDOMÍNIOS
+                </a>
+                <a 
+                  href="#unidades" 
+                  className="text-stone-700 hover:text-[#CB2E50] font-bold uppercase py-2 border-b border-stone-50"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  LOCAL
+                </a>
+                <a 
+                  href="https://wa.me/5553991222096" 
+                  className="bg-[#E2BA59] text-white px-6 py-3 rounded-full font-bold uppercase text-center hover:bg-[#CB2E50] transition"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  AGENDAR COLETA
+                </a>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
 
       {/* Hero Section */}
@@ -205,19 +248,19 @@ export default function App() {
         {/* Infográfico de Valor */}
         <section id="valor" className="grid md:grid-cols-2 gap-12 items-center">
           <div className="flex justify-center">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full max-w-[400px] rounded-2xl shadow-lg"
-              src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/SnapInsta.to_AQN90fgoausIgAIwRxPxLTYRLGSx4MQgu7jJWTHuDJzPi3fFpSFf4ODUeOcEywn3V7J6ekA1QW_rHPVbiiHg90_Yw4D56kiTONfjCzI.mp4"
-            />
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full max-w-[400px] rounded-2xl shadow-lg"
+                src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/SnapInsta.to_AQN90fgoausIgAIwRxPxLTYRLGSx4MQgu7jJWTHuDJzPi3fFpSFf4ODUeOcEywn3V7J6ekA1QW_rHPVbiiHg90_Yw4D56kiTONfjCzI.mp4"
+              />
           </div>
           <div>
             <h2 className="text-4xl font-bold mb-6 text-[#846CAD]">O Retorno do Tempo: Seu recurso mais valioso.</h2>
             <p className="text-lg text-stone-700 mb-4"><strong>Em Casa:</strong> 3 a 5 horas perdidas por semana com o ciclo interminável de separar, lavar, estender, esperar secar, recolher e passar.</p>
-            <p className="text-lg text-stone-700"><strong>Solução <span className="font-chocolate">Lava Aky</span>:</strong> Apenas 1 a 1,5 hora total. Lavagem rápida, secagem eficiente e roupas prontas para uso.</p>
+            <p className="text-lg text-stone-700"><strong>Solução <span className="font-chocolate">Lava Aky</span>:</strong> Apenas 1:15. Lavagem rápida, secagem eficiente e roupas prontas para uso.</p>
             <div className="mt-6 p-4 bg-[#F29593]/20 rounded-xl border border-[#F29593]">
               <p className="font-semibold text-[#CB2E50]">O calor da secadora profissional elimina a necessidade de passar a maioria das roupas. É só dobrar e guardar!</p>
             </div>
@@ -289,60 +332,59 @@ export default function App() {
         <section id="deixa-aky" className="bg-stone-100 p-12 rounded-3xl border border-stone-200">
           <h2 className="text-4xl font-bold mb-8 text-[#846CAD]">🧺 Serviço "Deixa aky"</h2>
           
-          {/* Videos */}
-          <div className="flex flex-col md:flex-row gap-8 mb-12">
-            <video
-              controls
-              className="w-full md:w-1/2 rounded-2xl shadow-lg"
-              src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/SnapInsta.to_AQOh2tfcb2PSI3PUdJWcyLFSnLDS4G-zME4dhh2JdsA8ooQJYFP9an6ckt9l-wIQwzLXvSJ8MbuXaMl2d801DmZQTWMJcpm20rTJABU.mp4"
-            />
-            <video
-              controls
-              className="w-full md:w-1/2 rounded-2xl shadow-lg"
-              src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/SnapInsta.to_AQP4kHSsZPbuiFtdU8xe4jXfafwtt-_7RPGmJivCbqbocopJeJCBuZ73womdBq_f6J48lAi3-touiIDGETb_VtylTChG1bGVNLs857o.mp4"
-            />
-          </div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="flex justify-center">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full max-w-[400px] rounded-2xl shadow-lg"
+                src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-d6254ca9-4bc1-4aa1-97e8-fdf44a73c58a.mp4"
+              />
+            </div>
+            <div className="space-y-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">Como funciona (Passo a Passo)</h3>
+                  <ul className="space-y-2 text-stone-700">
+                    <li>• <strong>Medição:</strong> Coloque as roupas no cesto de medida para saber de quantos ciclos você precisará.</li>
+                    <li>• <strong>Depósito:</strong> Coloque as roupas dentro do armário disponível.</li>
+                    <li>• <strong>Segurança:</strong> Tranque o armário e leve a chave com você.</li>
+                    <li>• <strong>Notificação:</strong> Envie uma mensagem para o WhatsApp da empresa com seu CPF, Nome e Número do armário.</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">✅ O que acontece depois</h3>
+                  <ul className="space-y-2 text-stone-700">
+                    <li>• A equipe executará o serviço contratado (lavar e secar).</li>
+                    <li>• Assim que as roupas estiverem limpas e dobradas, você receberá um aviso no WhatsApp.</li>
+                    <li>• Volte ao mesmo armário e use sua chave para retirar as roupas.</li>
+                    <li>• <strong>Dúvidas?</strong> Entre em contato pelo telefone: (53) 99122-2096.</li>
+                  </ul>
+                </div>
+              </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Como funciona (Passo a Passo)</h3>
-              <ul className="space-y-2 text-stone-700">
-                <li>• <strong>Medição:</strong> Coloque as roupas no cesto de medida para saber de quantos ciclos você precisará.</li>
-                <li>• <strong>Depósito:</strong> Coloque as roupas dentro do armário disponível.</li>
-                <li>• <strong>Segurança:</strong> Tranque o armário e leve a chave com você.</li>
-                <li>• <strong>Notificação:</strong> Envie uma mensagem para o WhatsApp da empresa com seu CPF, Nome e Número do armário.</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-2xl font-bold mb-4">✅ O que acontece depois</h3>
-              <ul className="space-y-2 text-stone-700 mb-6">
-                <li>• A equipe executará o serviço contratado (lavar e secar).</li>
-                <li>• Assim que as roupas estiverem limpas e dobradas, você receberá um aviso no WhatsApp.</li>
-                <li>• Volte ao mesmo armário e use sua chave para retirar as roupas.</li>
-                <li>• <strong>Dúvidas?</strong> Entre em contato pelo telefone: (53) 99122-2096.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 mt-8">
-            <div className="bg-white p-6 rounded-2xl border border-stone-200">
-              <h3 className="text-xl font-bold mb-4">🕒 Horários e Prazos</h3>
-              <ul className="space-y-1 text-stone-700">
-                <li>• Segunda a Quinta-Feira: 07:00 às 22:00</li>
-                <li>• Sexta-feira: 07:00 às 13:00</li>
-                <li>• Sábado e Domingo: <strong>NÃO funciona</strong></li>
-                <li>• <strong>Prazo de Entrega:</strong> 1 dia útil (24 horas)</li>
-                <li className="text-sm text-stone-500 mt-2">* A retirada deve ser feita no mesmo dia em que você receber o aviso no WhatsApp.</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white p-6 rounded-2xl border border-stone-200">
-              <h3 className="text-xl font-bold mb-4">💰 Custos e Pagamento</h3>
-              <ul className="space-y-1 text-stone-700">
-                <li>• <strong>Valor:</strong> R$ 10,00 por cesto medida.</li>
-                <li>• <strong>Forma de Pagamento:</strong> Via Pix (chave e-mail: lava.aky@gmail.com).</li>
-              </ul>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white p-6 rounded-2xl border border-stone-200">
+                  <h3 className="text-xl font-bold mb-4">🕒 Horários e Prazos</h3>
+                  <ul className="space-y-1 text-stone-700">
+                    <li>• Segunda a Quinta-Feira: 07:00 às 22:00</li>
+                    <li>• Sexta-feira: 07:00 às 13:00</li>
+                    <li>• Sábado e Domingo: <strong>NÃO funciona</strong></li>
+                    <li>• <strong>Prazo de Entrega:</strong> 1 dia útil (24 horas)</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-white p-6 rounded-2xl border border-stone-200">
+                  <h3 className="text-xl font-bold mb-4">💰 Custos e Pagamento</h3>
+                  <ul className="space-y-1 text-stone-700">
+                    <li>• <strong>Valor:</strong> R$ 10,00 por cesto medida.</li>
+                    <li>• <strong>Forma de Pagamento:</strong> Via Pix (chave e-mail: lava.aky@gmail.com).</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -410,6 +452,45 @@ export default function App() {
             />
           </div>
         </section>
+        {/* Comodidades e Regras */}
+        <section className="grid md:grid-cols-2 gap-8">
+          {/* Comodidades */}
+          <div className="bg-white p-8 rounded-3xl shadow-lg border border-stone-100">
+            <h2 className="text-3xl font-bold mb-8 text-[#846CAD]">Comodidades</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="text-center p-4 bg-stone-50 rounded-2xl">
+                <div className="text-[#846CAD] mb-3 flex justify-center"><Zap size={32} /></div>
+                <h4 className="font-bold mb-1">Wi-Fi Grátis</h4>
+                <p className="text-xs text-stone-500">Conecte-se enquanto espera.</p>
+              </div>
+              <div className="text-center p-4 bg-stone-50 rounded-2xl">
+                <div className="text-[#846CAD] mb-3 flex justify-center"><Clock size={32} /></div>
+                <h4 className="font-bold mb-1">Ar Condicionado</h4>
+                <p className="text-xs text-stone-500">Ambiente sempre climatizado.</p>
+              </div>
+              <div className="text-center p-4 bg-stone-50 rounded-2xl">
+                <div className="text-[#846CAD] mb-3 flex justify-center"><Star size={32} /></div>
+                <h4 className="font-bold mb-1">Alexa</h4>
+                <p className="text-xs text-stone-500">Peça sua música favorita.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Regras de Uso e Segurança */}
+          <div className="bg-white p-8 rounded-3xl shadow-lg border border-stone-100">
+            <h2 className="text-3xl font-bold mb-6 text-[#846CAD]">Regras de Uso e Segurança</h2>
+            <ul className="space-y-3 text-sm text-stone-700">
+              <li className="flex gap-2 items-start"><CheckCircle size={16} className="text-green-500 mt-1 shrink-0" /> Respeite a capacidade indicada em cada máquina.</li>
+              <li className="flex gap-2 items-start"><CheckCircle size={16} className="text-green-500 mt-1 shrink-0" /> Meça as peças sempre soltas, sem compactar no cesto e ultrapassar a borda.</li>
+              <li className="flex gap-2 items-start"><CheckCircle size={16} className="text-green-500 mt-1 shrink-0" /> Respeite a ordem de chegada.</li>
+              <li className="flex gap-2 items-start"><X size={16} className="text-red-500 mt-1 shrink-0" /> Proibido lavar ou secar tapetes, travesseiro, panos de chão, sapatos, roupas com graxa, areia ou excesso de pelos.</li>
+              <li className="flex gap-2 items-start"><X size={16} className="text-red-500 mt-1 shrink-0" /> Proibido adicionar produtos em pó em nossos equipamentos.</li>
+              <li className="flex gap-2 items-start"><X size={16} className="text-red-500 mt-1 shrink-0" /> Não adicione roupas sem centrifugar em nossas secadoras.</li>
+              <li className="flex gap-2 items-start font-bold text-[#846CAD]"><CheckCircle size={16} className="text-[#846CAD] mt-1 shrink-0" /> NOVIDADE: Agora lavamos acessórios e roupas pet em máquinas exclusivas!</li>
+            </ul>
+          </div>
+        </section>
+
         {/* Unidade Section */}
         <section id="unidades" className="py-16 bg-white rounded-3xl shadow-lg border border-stone-100 p-8">
           <h2 className="text-4xl font-bold text-center mb-12 text-[#846CAD]">Nosso Local</h2>
@@ -429,7 +510,7 @@ export default function App() {
             <div className="w-full space-y-4">
               <img 
                 src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20133749.png" 
-                alt="Localização <span className='font-chocolate'>Lava Aky</span>" 
+                alt="Localização Lava Aky" 
                 className="w-full rounded-2xl shadow-inner"
                 referrerPolicy="no-referrer"
               />
@@ -442,6 +523,35 @@ export default function App() {
                 <MapPin size={24} /> Abrir no Google Maps
               </a>
             </div>
+          </div>
+        </section>
+
+        {/* Perguntas Frequentes (FAQ) */}
+        <section id="faq" className="py-16">
+          <h2 className="text-4xl font-bold text-center mb-12 text-[#846CAD]">Perguntas Frequentes</h2>
+          <div className="max-w-3xl mx-auto space-y-4">
+            {[
+              { q: "Como funciona o sistema de autoatendimento?", a: "É simples! Você escolhe a máquina, coloca suas roupas, realiza o pagamento via totem ou aplicativo e a máquina inicia o ciclo automaticamente." },
+              { q: "Preciso levar sabão e amaciante?", a: "Não! Nossas máquinas já possuem dosagem automática de sabão e amaciante profissionais de alta qualidade inclusos no valor." },
+              { q: "Quanto tempo leva para lavar e secar?", a: "Cada ciclo de lavagem leva em média 30 a 35 minutos, e a secagem leva em média 45 minutos." },
+              { q: "Quais formas de pagamento são aceitas?", a: "Aceitamos cartões de débito, crédito e Pix diretamente no nosso totem de autoatendimento." },
+              { q: "Posso lavar qualquer tipo de roupa?", a: "Sim, desde que respeitadas as etiquetas das roupas e as regras da unidade (proibido tapetes pesados, sapatos, etc)." },
+              { q: "Como funcionam os pacotes de ciclos?", a: "Você pode comprar pacotes com 8, 16 ou 24 ciclos com descontos progressivos para usar quando quiser." },
+              { q: "O que é o serviço 'Deixa Aky'?", a: "É a nossa conveniência onde você deixa suas roupas no armário, nós lavamos, secamos, dobramos e avisamos quando estiver pronto para retirar." },
+              { q: "A lavanderia funciona em feriados?", a: "Sim! Nossa unidade de autoatendimento funciona todos os dias, incluindo feriados, das 07h às 22h." },
+              { q: "As máquinas são higienizadas?", a: "Sim, as máquinas passam por processos de higienização constantes e o próprio sabão utilizado possui ação desinfetante." },
+              { q: "Posso lavar acessórios de pet?", a: "Sim! Temos máquinas exclusivas para lavar e secar acessórios e roupas do seu pet com toda segurança e higiene." },
+            ].map((faq, index) => (
+              <details key={index} className="bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden group">
+                <summary className="p-6 font-bold cursor-pointer flex justify-between items-center list-none hover:bg-stone-50 transition">
+                  {faq.q}
+                  <ChevronDown className="group-open:rotate-180 transition-transform" size={20} />
+                </summary>
+                <div className="p-6 pt-0 text-stone-600 border-t border-stone-50">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
           </div>
         </section>
 
@@ -465,7 +575,7 @@ export default function App() {
         {/* Footer Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 items-center text-white">
           <div>
-            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20132651.png" alt="<span className='font-chocolate'>Lava Aky</span> Logo" className="h-16 mb-4" referrerPolicy="no-referrer" />
+            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura_de_tela_2026-03-07_113951-removebg-preview.png" alt="Lava Aky Logo" className="h-16 mb-4" referrerPolicy="no-referrer" />
             <p className="flex items-center gap-2 font-bold"><MapPin size={18}/> Rua Andrade Neves, 3061 - Pelotas/RS</p>
             <p className="flex items-center gap-2 mt-2 font-bold"><Clock size={18}/> 07h às 22h</p>
           </div>
