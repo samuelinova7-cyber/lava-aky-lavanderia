@@ -296,8 +296,8 @@ export default function App() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { name: 'Básico', ciclos: 8, preco: 136.80, desc: 'Uso ocasional/solteiros' },
-              { name: 'Plus', ciclos: 16, preco: 129.60, desc: 'Uso regular/casais' },
-              { name: 'Premium', ciclos: 24, preco: 122.40, desc: 'Uso frequente/famílias' },
+              { name: 'Plus', ciclos: 16, preco: 259.20, desc: 'Uso regular/casais' },
+              { name: 'Premium', ciclos: 24, preco: 381.60, desc: 'Uso frequente/famílias' },
             ].map(plano => (
               <div key={plano.name} className="bg-white p-8 rounded-2xl shadow-lg border border-stone-100 text-center">
                 <h3 className="text-2xl font-bold mb-2">{plano.name}</h3>
@@ -334,47 +334,57 @@ export default function App() {
         <section id="deixa-aky" className="bg-stone-100 p-12 rounded-3xl border border-stone-200">
           <h2 className="text-4xl font-bold mb-8 text-[#846CAD]">🧺 Serviço "Deixa aky"</h2>
           
-          <div className="space-y-8">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-2xl font-bold mb-4">Como funciona (Passo a Passo)</h3>
-                <ul className="space-y-2 text-stone-700">
-                  <li>• <strong>Medição:</strong> Coloque as roupas no cesto de medida para saber de quantos ciclos você precisará.</li>
-                  <li>• <strong>Depósito:</strong> Coloque as roupas dentro do armário disponível.</li>
-                  <li>• <strong>Segurança:</strong> Tranque o armário e leve a chave com você.</li>
-                  <li>• <strong>Notificação:</strong> Envie uma mensagem para o WhatsApp da empresa com seu CPF, Nome e Número do armário.</li>
-                </ul>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">Como funciona (Passo a Passo)</h3>
+                  <ul className="space-y-2 text-stone-700">
+                    <li>• <strong>Medição:</strong> Coloque as roupas no cesto de medida para saber de quantos ciclos você precisará.</li>
+                    <li>• <strong>Depósito:</strong> Coloque as roupas dentro do armário disponível.</li>
+                    <li>• <strong>Segurança:</strong> Tranque o armário e leve a chave com você.</li>
+                    <li>• <strong>Notificação:</strong> Envie uma mensagem para o WhatsApp da empresa com seu CPF, Nome e Número do armário.</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">✅ O que acontece depois</h3>
+                  <ul className="space-y-2 text-stone-700">
+                    <li>• A equipe executará o serviço contratado (lavar e secar).</li>
+                    <li>• Assim que as roupas estiverem limpas e dobradas, você receberá um aviso no WhatsApp.</li>
+                    <li>• Volte ao mesmo armário e use sua chave para retirar as roupas.</li>
+                    <li>• <strong>Dúvidas?</strong> Entre em contato pelo telefone: (53) 99122-2096.</li>
+                  </ul>
+                </div>
               </div>
-              
-              <div>
-                <h3 className="text-2xl font-bold mb-4">✅ O que acontece depois</h3>
-                <ul className="space-y-2 text-stone-700">
-                  <li>• A equipe executará o serviço contratado (lavar e secar).</li>
-                  <li>• Assim que as roupas estiverem limpas e dobradas, você receberá um aviso no WhatsApp.</li>
-                  <li>• Volte ao mesmo armário e use sua chave para retirar as roupas.</li>
-                  <li>• <strong>Dúvidas?</strong> Entre em contato pelo telefone: (53) 99122-2096.</li>
-                </ul>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white p-6 rounded-2xl border border-stone-200">
+                  <h3 className="text-xl font-bold mb-4">🕒 Horários e Prazos</h3>
+                  <ul className="space-y-1 text-stone-700">
+                    <li>• Segunda a Quinta-Feira: 07:00 às 22:00</li>
+                    <li>• Sexta-feira: 07:00 às 13:00</li>
+                    <li>• Sábado e Domingo: <strong>NÃO funciona</strong></li>
+                    <li>• <strong>Prazo de Entrega:</strong> 1 dia útil (24 horas)</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-white p-6 rounded-2xl border border-stone-200">
+                  <h3 className="text-xl font-bold mb-4">💰 Custos e Pagamento</h3>
+                  <ul className="space-y-1 text-stone-700">
+                    <li>• <strong>Valor:</strong> R$ 10,00 por cesto medida.</li>
+                    <li>• <strong>Forma de Pagamento:</strong> Via Pix (chave e-mail: lava.aky@gmail.com).</li>
+                  </ul>
+                </div>
               </div>
             </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white p-6 rounded-2xl border border-stone-200">
-                <h3 className="text-xl font-bold mb-4">🕒 Horários e Prazos</h3>
-                <ul className="space-y-1 text-stone-700">
-                  <li>• Segunda a Quinta-Feira: 07:00 às 22:00</li>
-                  <li>• Sexta-feira: 07:00 às 13:00</li>
-                  <li>• Sábado e Domingo: <strong>NÃO funciona</strong></li>
-                  <li>• <strong>Prazo de Entrega:</strong> 1 dia útil (24 horas)</li>
-                </ul>
-              </div>
-              
-              <div className="bg-white p-6 rounded-2xl border border-stone-200">
-                <h3 className="text-xl font-bold mb-4">💰 Custos e Pagamento</h3>
-                <ul className="space-y-1 text-stone-700">
-                  <li>• <strong>Valor:</strong> R$ 10,00 por cesto medida.</li>
-                  <li>• <strong>Forma de Pagamento:</strong> Via Pix (chave e-mail: lava.aky@gmail.com).</li>
-                </ul>
-              </div>
+            <div className="flex justify-center">
+              <img 
+                src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-10%20at%201.43.12%20PM%20(1).jpeg" 
+                alt="Serviço Deixa Aky" 
+                className="w-full max-w-[400px] rounded-2xl shadow-lg object-cover"
+                referrerPolicy="no-referrer"
+              />
             </div>
           </div>
         </section>
@@ -527,7 +537,7 @@ export default function App() {
                 muted
                 playsInline
                 className="w-full max-w-[400px] rounded-2xl shadow-lg"
-                src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-9967abd1-8869-423f-b0a6-be0ac3ae3857.mp4"
+                src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-37ae5719-fe1b-4d99-b8f8-78438049407d.mp4"
               />
             </div>
             <div className="space-y-8">
@@ -606,7 +616,7 @@ export default function App() {
         {/* Footer Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 items-center text-white">
           <div>
-            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura_de_tela_2026-03-07_113951-removebg-preview.png" alt="Lava Aky Logo" className="h-16 mb-4" referrerPolicy="no-referrer" />
+            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura_de_tela_2026-03-10_161143-removebg-preview.png" alt="Lava Aky Logo" className="h-24 mb-4" referrerPolicy="no-referrer" />
             <p className="flex items-center gap-2 font-bold"><MapPin size={18}/> Rua Andrade Neves, 3061 - Pelotas/RS</p>
             <p className="flex items-center gap-2 mt-2 font-bold"><Clock size={18}/> 07h às 22h</p>
           </div>
