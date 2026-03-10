@@ -167,7 +167,7 @@ export default function App() {
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12">
-            <a href="https://www.google.com/search?q=Lava+aky+Pelotas" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white text-stone-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-stone-200 transition shadow-lg">
+            <a href="https://g.page/r/CWyKwEm87zhAEBE/review" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white text-stone-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-stone-200 transition shadow-lg">
               <Star size={20} fill="currentColor" /> Deixar avaliação no Google
             </a>
           </div>
@@ -257,24 +257,26 @@ export default function App() {
                 src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/SnapInsta.to_AQN90fgoausIgAIwRxPxLTYRLGSx4MQgu7jJWTHuDJzPi3fFpSFf4ODUeOcEywn3V7J6ekA1QW_rHPVbiiHg90_Yw4D56kiTONfjCzI.mp4"
               />
           </div>
-          <div>
-            <h2 className="text-4xl font-bold mb-6 text-[#846CAD]">O Retorno do Tempo: Seu recurso mais valioso.</h2>
-            <p className="text-lg text-stone-700 mb-4"><strong>Em Casa:</strong> 3 a 5 horas perdidas por semana com o ciclo interminável de separar, lavar, estender, esperar secar, recolher e passar.</p>
-            <p className="text-lg text-stone-700"><strong>Solução <span className="font-chocolate">Lava Aky</span>:</strong> Apenas 1:15. Lavagem rápida, secagem eficiente e roupas prontas para uso.</p>
-            <div className="mt-6 p-4 bg-[#F29593]/20 rounded-xl border border-[#F29593]">
-              <p className="font-semibold text-[#CB2E50]">O calor da secadora profissional elimina a necessidade de passar a maioria das roupas. É só dobrar e guardar!</p>
-            </div>
-          </div>
-          <div className="bg-white p-8 rounded-2xl shadow-lg border border-stone-100">
-            <h3 className="text-2xl font-bold mb-6 text-[#E2BA59]">A Matemática Real</h3>
-            <div className="space-y-4">
-              <div className="flex justify-between items-center border-b pb-2">
-                <span>Em Casa (custo/mês)</span>
-                <span className="font-bold text-[#CB2E50]">R$ 170 - R$ 300</span>
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-4xl font-bold mb-6 text-[#846CAD]">O Retorno do Tempo: Seu recurso mais valioso.</h2>
+              <p className="text-lg text-stone-700 mb-4"><strong>Em Casa:</strong> 3 a 5 horas perdidas por semana com o ciclo interminável de separar, lavar, estender, esperar secar, recolher e passar.</p>
+              <p className="text-lg text-stone-700"><strong>Solução <span className="font-chocolate">Lava Aky</span>:</strong> Apenas 1:15. Lavagem rápida, secagem eficiente e roupas prontas para uso.</p>
+              <div className="mt-6 p-4 bg-[#F29593]/20 rounded-xl border border-[#F29593]">
+                <p className="font-semibold text-[#CB2E50]">O calor da secadora profissional elimina a necessidade de passar a maioria das roupas. É só dobrar e guardar!</p>
               </div>
-              <div className="flex justify-between items-center border-b pb-2">
-                <span>Na <span className="font-chocolate">Lava Aky</span> (custo/mês)</span>
-                <span className="font-bold text-[#846CAD]">~ R$ 144</span>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-stone-100">
+              <h3 className="text-2xl font-bold mb-6 text-[#E2BA59]">A Matemática Real</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center border-b pb-2">
+                  <span>Em Casa (custo/mês)</span>
+                  <span className="font-bold text-[#CB2E50]">R$ 170 - R$ 300</span>
+                </div>
+                <div className="flex justify-between items-center border-b pb-2">
+                  <span>Na <span className="font-chocolate">Lava Aky</span> (custo/mês)</span>
+                  <span className="font-bold text-[#846CAD]">~ R$ 144</span>
+                </div>
               </div>
             </div>
           </div>
@@ -285,7 +287,7 @@ export default function App() {
           <h2 className="text-4xl font-bold text-center mb-4 text-[#846CAD]">PLANOS E PACOTES <span className="font-chocolate">Lava Aky</span></h2>
           <p className="text-center text-xl font-semibold text-stone-800 mb-6">Rotina leve, bolso cheio.</p>
           <p className="text-center text-stone-600 mb-12 max-w-3xl mx-auto">
-            A <span className="font-chocolate">Lava Aky</span> não é apenas uma lavanderia de autoatendimento, nós entregamos praticidade no seu dia-a-dia, economia e uma experiência que transformadora ao de cuidar das suas roupas.
+            A <span className="font-chocolate">Lava Aky</span> não é apenas uma lavanderia de autoatendimento, nós entregamos praticidade no seu dia a dia, economia e uma experiência transformadora ao cuidar das suas roupas.
             <br /><br />
             Oferecemos Pacotes de Uso, buscando o máximo de conveniência e o melhor custo-benefício. Você pode lavar e secar seus cestos de roupa com descontos progressivos, garantindo o cuidado com suas roupas.
             <br /><br />
@@ -332,58 +334,46 @@ export default function App() {
         <section id="deixa-aky" className="bg-stone-100 p-12 rounded-3xl border border-stone-200">
           <h2 className="text-4xl font-bold mb-8 text-[#846CAD]">🧺 Serviço "Deixa aky"</h2>
           
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="flex justify-center">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full max-w-[400px] rounded-2xl shadow-lg"
-                src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-d6254ca9-4bc1-4aa1-97e8-fdf44a73c58a.mp4"
-              />
-            </div>
-            <div className="space-y-8">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">Como funciona (Passo a Passo)</h3>
-                  <ul className="space-y-2 text-stone-700">
-                    <li>• <strong>Medição:</strong> Coloque as roupas no cesto de medida para saber de quantos ciclos você precisará.</li>
-                    <li>• <strong>Depósito:</strong> Coloque as roupas dentro do armário disponível.</li>
-                    <li>• <strong>Segurança:</strong> Tranque o armário e leve a chave com você.</li>
-                    <li>• <strong>Notificação:</strong> Envie uma mensagem para o WhatsApp da empresa com seu CPF, Nome e Número do armário.</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">✅ O que acontece depois</h3>
-                  <ul className="space-y-2 text-stone-700">
-                    <li>• A equipe executará o serviço contratado (lavar e secar).</li>
-                    <li>• Assim que as roupas estiverem limpas e dobradas, você receberá um aviso no WhatsApp.</li>
-                    <li>• Volte ao mesmo armário e use sua chave para retirar as roupas.</li>
-                    <li>• <strong>Dúvidas?</strong> Entre em contato pelo telefone: (53) 99122-2096.</li>
-                  </ul>
-                </div>
+          <div className="space-y-8">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-2xl font-bold mb-4">Como funciona (Passo a Passo)</h3>
+                <ul className="space-y-2 text-stone-700">
+                  <li>• <strong>Medição:</strong> Coloque as roupas no cesto de medida para saber de quantos ciclos você precisará.</li>
+                  <li>• <strong>Depósito:</strong> Coloque as roupas dentro do armário disponível.</li>
+                  <li>• <strong>Segurança:</strong> Tranque o armário e leve a chave com você.</li>
+                  <li>• <strong>Notificação:</strong> Envie uma mensagem para o WhatsApp da empresa com seu CPF, Nome e Número do armário.</li>
+                </ul>
               </div>
+              
+              <div>
+                <h3 className="text-2xl font-bold mb-4">✅ O que acontece depois</h3>
+                <ul className="space-y-2 text-stone-700">
+                  <li>• A equipe executará o serviço contratado (lavar e secar).</li>
+                  <li>• Assim que as roupas estiverem limpas e dobradas, você receberá um aviso no WhatsApp.</li>
+                  <li>• Volte ao mesmo armário e use sua chave para retirar as roupas.</li>
+                  <li>• <strong>Dúvidas?</strong> Entre em contato pelo telefone: (53) 99122-2096.</li>
+                </ul>
+              </div>
+            </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-white p-6 rounded-2xl border border-stone-200">
-                  <h3 className="text-xl font-bold mb-4">🕒 Horários e Prazos</h3>
-                  <ul className="space-y-1 text-stone-700">
-                    <li>• Segunda a Quinta-Feira: 07:00 às 22:00</li>
-                    <li>• Sexta-feira: 07:00 às 13:00</li>
-                    <li>• Sábado e Domingo: <strong>NÃO funciona</strong></li>
-                    <li>• <strong>Prazo de Entrega:</strong> 1 dia útil (24 horas)</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-white p-6 rounded-2xl border border-stone-200">
-                  <h3 className="text-xl font-bold mb-4">💰 Custos e Pagamento</h3>
-                  <ul className="space-y-1 text-stone-700">
-                    <li>• <strong>Valor:</strong> R$ 10,00 por cesto medida.</li>
-                    <li>• <strong>Forma de Pagamento:</strong> Via Pix (chave e-mail: lava.aky@gmail.com).</li>
-                  </ul>
-                </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white p-6 rounded-2xl border border-stone-200">
+                <h3 className="text-xl font-bold mb-4">🕒 Horários e Prazos</h3>
+                <ul className="space-y-1 text-stone-700">
+                  <li>• Segunda a Quinta-Feira: 07:00 às 22:00</li>
+                  <li>• Sexta-feira: 07:00 às 13:00</li>
+                  <li>• Sábado e Domingo: <strong>NÃO funciona</strong></li>
+                  <li>• <strong>Prazo de Entrega:</strong> 1 dia útil (24 horas)</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white p-6 rounded-2xl border border-stone-200">
+                <h3 className="text-xl font-bold mb-4">💰 Custos e Pagamento</h3>
+                <ul className="space-y-1 text-stone-700">
+                  <li>• <strong>Valor:</strong> R$ 10,00 por cesto medida.</li>
+                  <li>• <strong>Forma de Pagamento:</strong> Via Pix (chave e-mail: lava.aky@gmail.com).</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -486,7 +476,7 @@ export default function App() {
               <li className="flex gap-2 items-start"><X size={16} className="text-red-500 mt-1 shrink-0" /> Proibido lavar ou secar tapetes, travesseiro, panos de chão, sapatos, roupas com graxa, areia ou excesso de pelos.</li>
               <li className="flex gap-2 items-start"><X size={16} className="text-red-500 mt-1 shrink-0" /> Proibido adicionar produtos em pó em nossos equipamentos.</li>
               <li className="flex gap-2 items-start"><X size={16} className="text-red-500 mt-1 shrink-0" /> Não adicione roupas sem centrifugar em nossas secadoras.</li>
-              <li className="flex gap-2 items-start font-bold text-[#846CAD]"><CheckCircle size={16} className="text-[#846CAD] mt-1 shrink-0" /> NOVIDADE: Agora lavamos acessórios e roupas pet em máquinas exclusivas!</li>
+              <li className="flex gap-2 items-start"><X size={16} className="text-red-500 mt-1 shrink-0" /> Não é permitido lavar acessórios e roupas de pets nas máquinas de uso comum por questões de higiene e conservação dos equipamentos.</li>
             </ul>
           </div>
         </section>
@@ -526,6 +516,47 @@ export default function App() {
           </div>
         </section>
 
+        {/* Simbologia Têxtil */}
+        <section id="simbologia" className="py-16">
+          <h2 className="text-4xl font-bold text-center mb-12 text-[#846CAD]">Simbologia Têxtil</h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="flex justify-center">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full max-w-[400px] rounded-2xl shadow-lg"
+                src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-9967abd1-8869-423f-b0a6-be0ac3ae3857.mp4"
+              />
+            </div>
+            <div className="space-y-8">
+              <div className="bg-white p-8 rounded-3xl shadow-lg border border-stone-100">
+                <h3 className="text-2xl font-bold mb-6 text-[#846CAD] text-center">Lavagem</h3>
+                <ul className="space-y-4 text-stone-700">
+                  <li className="flex items-center gap-3"><strong>Lavagem à máquina:</strong> Processo normal.</li>
+                  <li className="flex items-center gap-3"><strong>Lavagem à máquina (ciclo delicado):</strong> Ação mecânica reduzida.</li>
+                  <li className="flex items-center gap-3"><strong>Lavagem manual:</strong> Não lavar em máquina.</li>
+                  <li className="flex items-center gap-3"><strong>Não lavar:</strong> Não utilizar água.</li>
+                  <li className="flex items-center gap-3"><strong>Alvejante:</strong> Permitido qualquer agente de alvejamento.</li>
+                  <li className="flex items-center gap-3"><strong>Não usar alvejante:</strong> Proibido o uso de alvejantes.</li>
+                </ul>
+              </div>
+              <div className="bg-white p-8 rounded-3xl shadow-lg border border-stone-100">
+                <h3 className="text-2xl font-bold mb-6 text-[#846CAD] text-center">Secagem</h3>
+                <ul className="space-y-4 text-stone-700">
+                  <li className="flex items-center gap-3"><strong>Secar:</strong> Secagem em tambor permitida.</li>
+                  <li className="flex items-center gap-3"><strong>Secar em temperatura mínima:</strong> Secagem suave.</li>
+                  <li className="flex items-center gap-3"><strong>Não secar:</strong> Não utilizar secadora.</li>
+                  <li className="flex items-center gap-3"><strong>Secar na sombra:</strong> Secagem natural à sombra.</li>
+                  <li className="flex items-center gap-3"><strong>Secar na horizontal:</strong> Estender sobre superfície plana.</li>
+                  <li className="flex items-center gap-3"><strong>Secar em varal:</strong> Secagem natural pendurada.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Perguntas Frequentes (FAQ) */}
         <section id="faq" className="py-16">
           <h2 className="text-4xl font-bold text-center mb-12 text-[#846CAD]">Perguntas Frequentes</h2>
@@ -540,7 +571,7 @@ export default function App() {
               { q: "O que é o serviço 'Deixa Aky'?", a: "É a nossa conveniência onde você deixa suas roupas no armário, nós lavamos, secamos, dobramos e avisamos quando estiver pronto para retirar." },
               { q: "A lavanderia funciona em feriados?", a: "Sim! Nossa unidade de autoatendimento funciona todos os dias, incluindo feriados, das 07h às 22h." },
               { q: "As máquinas são higienizadas?", a: "Sim, as máquinas passam por processos de higienização constantes e o próprio sabão utilizado possui ação desinfetante." },
-              { q: "Posso lavar acessórios de pet?", a: "Sim! Temos máquinas exclusivas para lavar e secar acessórios e roupas do seu pet com toda segurança e higiene." },
+              { q: "Posso lavar acessórios de pet?", a: "Não é permitido lavar acessórios e roupas de pets nas máquinas de uso comum por questões de higiene e conservação dos equipamentos." },
             ].map((faq, index) => (
               <details key={index} className="bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden group">
                 <summary className="p-6 font-bold cursor-pointer flex justify-between items-center list-none hover:bg-stone-50 transition">
