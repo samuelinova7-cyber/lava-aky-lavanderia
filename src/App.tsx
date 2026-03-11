@@ -112,8 +112,8 @@ export default function App() {
               A <span className="font-chocolate">Lava Aky</span> lavanderia nasceu para transformar a rotina doméstica em uma experiência ágil e eficiente. Localizada no centro de Pelotas, oferecemos um sistema híbrido, onde você poderá utilizar nosso serviço de 3 maneiras: autoatendimento completo e intuitivo, serviço de atendente ou delivery. Nossas máquinas profissionais garantem uma limpeza profunda e secagem rápida, economizando água, energia e, principalmente, o seu tempo. Ambiente climatizado, Wi-Fi gratuito, Alexa e higiene rigorosa.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="https://wa.me/5553991222096" className="bg-[#846CAD] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#CB2E50] transition shadow-lg">
-                Agendar Coleta via WhatsApp
+              <a href="https://wa.link/w77i2s" target="_blank" rel="noopener noreferrer" className="bg-[#846CAD] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#CB2E50] transition shadow-lg">
+                Agendar Coleta
               </a>
               <a href="#planos" className="bg-white text-stone-900 px-8 py-4 rounded-full text-lg font-semibold border border-stone-200 hover:border-[#E2BA59] transition">
                 Ver planos
@@ -295,18 +295,23 @@ export default function App() {
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: 'Básico', ciclos: 8, preco: 136.80, desc: 'Uso ocasional/solteiros' },
-              { name: 'Plus', ciclos: 16, preco: 259.20, desc: 'Uso regular/casais' },
-              { name: 'Premium', ciclos: 24, preco: 381.60, desc: 'Uso frequente/famílias' },
+              { name: 'Básico', ciclos: 8, preco: 136.80, desc: 'Uso ocasional/solteiros', link: 'https://wa.link/r44e1y' },
+              { name: 'Plus', ciclos: 16, preco: 259.20, desc: 'Uso regular/casais', link: 'https://wa.link/u10gjm' },
+              { name: 'Premium', ciclos: 24, preco: 381.60, desc: 'Uso frequente/famílias', link: 'https://wa.link/u10gjm' },
             ].map(plano => (
               <div key={plano.name} className="bg-white p-8 rounded-2xl shadow-lg border border-stone-100 text-center">
                 <h3 className="text-2xl font-bold mb-2">{plano.name}</h3>
                 <p className="text-4xl font-bold text-[#846CAD] mb-4">{plano.ciclos} <span className="text-lg font-normal text-stone-500">ciclos</span></p>
                 <p className="text-2xl font-bold mb-4">R$ {plano.preco.toFixed(2).replace('.', ',')}</p>
                 <p className="text-stone-600 mb-6">{plano.desc}</p>
-                <a href="https://wa.me/5553991222096" className="block bg-[#E2BA59] text-white py-3 rounded-full font-semibold hover:bg-[#CB2E50] transition">Escolher</a>
+                <a href={plano.link} target="_blank" rel="noopener noreferrer" className="block bg-[#E2BA59] text-white py-3 rounded-full font-semibold hover:bg-[#CB2E50] transition mb-3">Escolher</a>
               </div>
             ))}
+          </div>
+          <div className="text-center mt-12">
+            <a href="https://wa.link/w77i2s" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#846CAD] text-white px-8 py-4 rounded-full text-xl font-bold hover:bg-[#CB2E50] transition shadow-lg">
+              <MessageCircle size={24} /> Solicitar Coleta
+            </a>
           </div>
           <p className="text-center text-stone-500 mt-8 text-sm">* 1 ciclo = 1 lavagem ou 1 secagem.</p>
         </section>
@@ -315,7 +320,7 @@ export default function App() {
         <section id="b2b" className="bg-[#846CAD] text-white p-12 rounded-3xl">
           <h2 className="text-4xl font-bold mb-6 text-center">PLANOS E PACOTES <span className="font-chocolate">Lava Aky</span> PARA CNPJ</h2>
           <p className="text-lg mb-12 text-center max-w-2xl mx-auto">A <span className="font-chocolate">Lava Aky</span> tem uma solução para todo tipo de negócio.</p>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
               { title: 'Hospedagem (Hotéis e Airbnbs)', desc: 'Para o cuidado constante com roupas de cama, mesa e banho.' },
               { title: 'Serviços (Salões de Beleza e Clínicas)', desc: 'Higiene e apresentação profissional de toalhas e uniformes.' },
@@ -327,6 +332,11 @@ export default function App() {
                 <p className="text-stone-100">{item.desc}</p>
               </div>
             ))}
+          </div>
+          <div className="text-center">
+            <a href="https://wa.link/o3ahop" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white text-[#846CAD] px-8 py-4 rounded-full text-xl font-bold hover:bg-stone-100 transition shadow-lg">
+              <MessageCircle size={24} /> Sou CNPJ
+            </a>
           </div>
         </section>
 
@@ -378,14 +388,18 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center">
+            <motion.div 
+              className="flex justify-center"
+              animate={{ y: [0, -15, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            >
               <img 
-                src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-10%20at%201.43.12%20PM%20(1).jpeg" 
+                src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-11%20141212.png" 
                 alt="Serviço Deixa Aky" 
-                className="w-full max-w-[400px] rounded-2xl shadow-lg object-cover"
+                className="w-full max-w-[400px] rounded-3xl shadow-[0_0_40px_rgba(132,108,173,0.3)] border-8 border-white object-cover"
                 referrerPolicy="no-referrer"
               />
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -396,7 +410,7 @@ export default function App() {
           
           <div className="grid md:grid-cols-4 gap-6 mb-12">
             {[
-              { title: 'Cashback', desc: 'Quem escolhe a 2 Ciclos regularmente aproveita benefícios especiais de forma automática. Porque fidelidade merece retorno.' },
+              { title: 'Cashback', desc: 'Quem escolhe a Lava Aky regularmente aproveita benefícios especiais de forma automática. Porque fidelidade merece retorno.' },
               { title: 'Aniversariantes', desc: 'No mês do seu aniversário, você recebe um benefício exclusivo para comemorar com roupa limpa e renovada.' },
               { title: 'Cupons', desc: 'Clientes cadastrados recebem promoções e condições especiais ao longo do ano via WhatsApp.' },
               { title: 'Promoções', desc: 'Campanhas especiais divulgadas em nossas redes sociais e unidades.' },
