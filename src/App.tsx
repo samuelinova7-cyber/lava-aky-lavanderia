@@ -237,7 +237,7 @@ export default function App() {
             </div>
           </div>
 
-          <a href="https://wa.me/5553991222096" className="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full text-2xl font-bold hover:scale-105 transition shadow-lg">
+          <a href="https://wa.me/5553991222096" className="inline-flex items-center gap-3 bg-[#846CAD] text-white px-8 py-4 rounded-full text-2xl font-bold hover:scale-105 transition shadow-lg">
             <MessageCircle size={32} /> Solicitar Convênio
           </a>
         </div>
@@ -308,11 +308,6 @@ export default function App() {
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
-            <a href="https://wa.link/w77i2s" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#846CAD] text-white px-8 py-4 rounded-full text-xl font-bold hover:bg-[#CB2E50] transition shadow-lg">
-              <MessageCircle size={24} /> Solicitar Coleta
-            </a>
-          </div>
           <p className="text-center text-stone-500 mt-8 text-sm">* 1 ciclo = 1 lavagem ou 1 secagem.</p>
         </section>
 
@@ -335,7 +330,7 @@ export default function App() {
           </div>
           <div className="text-center">
             <a href="https://wa.link/o3ahop" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white text-[#846CAD] px-8 py-4 rounded-full text-xl font-bold hover:bg-stone-100 transition shadow-lg">
-              <MessageCircle size={24} /> Sou CNPJ
+              <MessageCircle size={24} /> Solicitar Planos CNPJ
             </a>
           </div>
         </section>
