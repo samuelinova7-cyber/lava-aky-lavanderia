@@ -642,6 +642,9 @@ export default function App() {
             <p className="flex items-center gap-2 mt-2 font-bold"><a href="mailto:lava.aky@gmail.com">lava.aky@gmail.com</a></p>
           </div>
         </div>
+        <div className="relative z-10 text-center mt-12 pt-8 border-t border-white/10 text-white/60 text-sm">
+          <p>© {new Date().getFullYear()} Lava Aky - Todos os direitos reservados.</p>
+        </div>
       </footer>
 
       {/* WhatsApp Button */}
