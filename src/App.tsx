@@ -379,7 +379,7 @@ export default function App() {
                     <span className="text-3xl font-black self-start mt-2">R$</span>
                     <span className="text-8xl font-black tracking-tighter tabular-nums">18,90</span>
                 </div>
-                <p className="text-xs font-black mt-4 uppercase tracking-[0.3em] opacity-40">Uso avulso em qualquer unidade</p>
+                <p className="text-sm font-black mt-4 uppercase tracking-[0.3em] opacity-60">Uso avulso</p>
             </div>
         </section>
 
@@ -600,6 +600,23 @@ export default function App() {
           </div>
         </section>
 
+        {/* Simbologia Têxtil */}
+        <section id="simbologia" className="py-24">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black mb-4 text-[#846CAD] tracking-tighter uppercase italic">Simbologia Têxtil</h2>
+          </div>
+          <div className="flex justify-center max-w-5xl mx-auto">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full max-w-[500px] rounded-[3rem] shadow-2xl border-8 border-white"
+              src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-37ae5719-fe1b-4d99-b8f8-78438049407d.mp4"
+            />
+          </div>
+        </section>
+
         {/* Unidade Section */}
         <section id="unidades" className="py-16 bg-white rounded-3xl shadow-xl border border-stone-100 p-8 md:p-12 relative overflow-hidden">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 uppercase tracking-tight">COMO <span className="text-[#846CAD]">CHEGAR</span></h2>
@@ -632,23 +649,6 @@ export default function App() {
                 referrerPolicy="no-referrer"
               />
             </div>
-          </div>
-        </section>
-
-        {/* Simbologia Têxtil */}
-        <section id="simbologia" className="py-24">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black mb-4 text-[#846CAD] tracking-tighter uppercase italic">Simbologia Têxtil</h2>
-          </div>
-          <div className="flex justify-center max-w-5xl mx-auto">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full max-w-[500px] rounded-[3rem] shadow-2xl border-8 border-white"
-              src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-37ae5719-fe1b-4d99-b8f8-78438049407d.mp4"
-            />
           </div>
         </section>
 
@@ -713,8 +713,8 @@ export default function App() {
           <div className="space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-widest text-[#E2BA59]">Empresa</h4>
             <div className="flex gap-4">
-              <a href="https://www.instagram.com/lavaaky" target="_blank" rel="noopener noreferrer" className="hover:text-[#846CAD] transition-colors"><Instagram size={24} /></a>
-              <a href="https://www.facebook.com/lavaaky" target="_blank" rel="noopener noreferrer" className="hover:text-[#CB2E50] transition-colors"><Facebook size={24} /></a>
+              <a href="https://www.instagram.com/lava.aky?igsh=MXY4MjVrOHNvMjRuMw==" target="_blank" rel="noopener noreferrer" className="hover:text-[#846CAD] transition-colors"><Instagram size={24} /></a>
+              <a href="https://www.facebook.com/share/1AQ4apXk3i/" target="_blank" rel="noopener noreferrer" className="hover:text-[#CB2E50] transition-colors"><Facebook size={24} /></a>
             </div>
             <p className="text-xs opacity-50 italic">© {new Date().getFullYear()} Lava Aky</p>
           </div>
