@@ -102,49 +102,62 @@ export default function App() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20">
-        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-          {/* Left: Video/Image */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-20"
+            src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-698df21a-6d22-4040-88d4-05cb8a59cbae.mp4"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-stone-50 via-stone-50/80 to-transparent"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-10 py-32">
+          {/* Left: Text and Buttons */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="inline-block bg-[#F29593]/20 text-[#CB2E50] px-4 py-1 rounded-full text-sm font-bold mb-6 italic uppercase tracking-widest">
+              • Tecnologia profissional • Cuidado especializado
+            </div>
+            <h1 className="text-4xl md:text-6xl font-black mb-6 text-stone-900 leading-tight tracking-tight uppercase">
+              Sua aliada para você <span className="text-[#846CAD] block">aproveitar a vida</span>
+            </h1>
+            <p className="text-lg text-stone-500 mb-8 leading-relaxed max-w-xl font-medium italic">
+              A <span className="font-bold text-[#846CAD]">Lava Aky</span> nasceu para transformar a rotina doméstica em algo ágil. Oferecemos um sistema híbrido no centro de Pelotas: autoatendimento, serviço de atendente ou delivery.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a href="https://wa.link/w77i2s" target="_blank" rel="noopener noreferrer" className="bg-[#846CAD] text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-[#CB2E50] transition shadow-lg uppercase tracking-wider">
+                Agendar Coleta
+              </a>
+              <a href="#planos" className="bg-white text-stone-900 border-2 border-stone-200 px-8 py-4 rounded-full text-lg font-bold hover:bg-stone-50 transition shadow-md uppercase tracking-wider">
+                Ver planos
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Right: Featured Video Card */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="relative"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="hidden md:block"
           >
-            <div className="bg-white p-4 rounded-3xl shadow-2xl border border-stone-100">
-              <video
+            <div className="bg-white p-6 rounded-[3rem] shadow-2xl border-t-8 border-[#846CAD] overflow-hidden">
+               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-auto rounded-2xl"
+                className="w-full h-auto rounded-[2rem]"
                 src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-698df21a-6d22-4040-88d4-05cb8a59cbae.mp4"
               />
-            </div>
-          </motion.div>
-
-          {/* Right: Text and Buttons */}
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <div className="inline-block bg-[#F29593]/20 text-[#CB2E50] px-4 py-1 rounded-full text-sm font-semibold mb-6">
-              • Tecnologia profissional • Cuidado especializado
-            </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-stone-900 leading-tight tracking-tight">
-              Sua aliada para você <span className="text-[#846CAD] block">aproveitar a vida</span>
-            </h1>
-            <p className="text-lg text-stone-500 mb-8 leading-relaxed max-w-xl">
-              A <span className="font-bold text-[#846CAD]">Lava Aky</span> nasceu para transformar a rotina doméstica em algo ágil. Oferecemos um sistema híbrido no centro de Pelotas: autoatendimento, serviço de atendente ou delivery.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a href="https://wa.link/w77i2s" target="_blank" rel="noopener noreferrer" className="bg-[#846CAD] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#CB2E50] transition shadow-lg">
-                Agendar Coleta
-              </a>
-              <a href="#planos" className="bg-white text-stone-900 px-8 py-4 rounded-full text-lg font-semibold border border-stone-200 hover:border-[#E2BA59] transition">
-                Ver planos
-              </a>
             </div>
           </motion.div>
         </div>
@@ -223,26 +236,91 @@ export default function App() {
         </div>
       </section>
 
-      {/* Valores e Delivery */}
-      <section id="valores-delivery" className="py-16 bg-[#F5F3F7] text-stone-900">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[#846CAD]">CONVÊNIOS EXCLUSIVOS</h2>
-          <p className="text-lg mb-12 text-stone-500 max-w-2xl mx-auto">Leve a praticidade da <span className="text-[#846CAD] font-bold">Lava Aky</span> para o seu condomínio ou empresa.</p>
+      {/* Parcerias com Condomínios */}
+      <section id="valores-delivery" className="py-24 bg-[#846CAD] text-white relative overflow-hidden">
+        {/* Background Decorative Circles */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48 blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-black/10 rounded-full -ml-48 -mb-48 blur-3xl"></div>
+        
+        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl font-black mb-16 tracking-tight uppercase">PARCERIAS COM CONDOMÍNIOS</h2>
           
-          <div className="bg-white p-1 pb-16 rounded-3xl shadow-xl relative mb-24 max-w-xs mx-auto overflow-hidden group">
-            <div className="bg-[#846CAD] text-white py-12 px-8 transition-colors group-hover:bg-[#CB2E50]">
-              <p className="text-xs font-bold tracking-widest opacity-60 uppercase mb-4">Lave ou Seque</p>
-              <div className="flex items-center justify-center gap-1">
-                <span className="text-xl font-bold self-start mt-2">R$</span>
-                <span className="text-7xl font-bold tabular-nums">18,90</span>
+          {/* Lave ou Seque Card */}
+          <div className="max-w-sm mx-auto bg-stone-50/10 backdrop-blur-md border-4 border-[#E2BA59] rounded-[3rem] p-8 mb-16 relative overflow-hidden shadow-2xl">
+            <div className="absolute top-0 left-0 w-full h-2 bg-[#E2BA59]"></div>
+            <div className="bg-[#E2BA59] text-white inline-block px-8 py-2 rounded-full font-black text-xl mb-6 shadow-md border-2 border-white/20">
+              LAVE <span className="text-sm font-bold opacity-80">OU</span> SEQUE
+            </div>
+            <div className="bg-white rounded-[2rem] p-6 shadow-inner border border-stone-200">
+              <p className="text-[#846CAD] font-black text-sm uppercase tracking-widest mb-1">Por Apenas</p>
+              <div className="flex items-center justify-center gap-1 text-[#E2BA59]">
+                <span className="text-2xl font-black self-start mt-2">R$</span>
+                <span className="text-7xl font-black leading-none tracking-tighter">17,99</span>
               </div>
-              <p className="mt-4 text-sm font-medium opacity-80 italic">Preço por ciclo</p>
+              <p className="mt-2 text-[#846CAD] font-bold text-xs uppercase tracking-widest">LAVAGEM</p>
             </div>
-            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-full px-6">
-              <a href="https://wa.me/5553991222096" className="flex items-center justify-center gap-3 bg-stone-900 text-white w-full py-4 rounded-2xl text-lg font-bold hover:bg-[#E2BA59] transition-all shadow-lg">
-                <MessageCircle size={20} /> Solicitar Convênio
-              </a>
+          </div>
+
+          {/* Vantagens List */}
+          <div className="text-left max-w-2xl mx-auto space-y-4 mb-20 bg-black/10 p-8 rounded-[2rem] backdrop-blur-sm">
+             <p className="font-bold text-[#E2BA59] text-center mb-8 text-2xl uppercase tracking-widest">👉 Vantagens exclusivas:</p>
+             <ul className="space-y-6 text-lg sm:text-xl font-medium">
+                <li className="flex items-start gap-4">
+                   <CheckCircle className="text-[#E2BA59] shrink-0 mt-1" size={24} />
+                   <span>Acima de 4 clientes, o <span className="font-black text-[#E2BA59]">DELIVERY É GRATUITO</span> 🚚</span>
+                </li>
+                <li className="flex items-start gap-4">
+                   <CheckCircle className="text-[#E2BA59] shrink-0 mt-1" size={24} />
+                   <span>Serviço de dobragem como <span className="font-black text-[#E2BA59]">BRINDE</span> 🧺</span>
+                </li>
+                <li className="flex items-start gap-4">
+                   <CheckCircle className="text-[#E2BA59] shrink-0 mt-1" size={24} />
+                   <span>Retiradas sempre às segundas e quintas-feiras</span>
+                </li>
+                <li className="flex items-start gap-4">
+                   <CheckCircle className="text-[#E2BA59] shrink-0 mt-1" size={24} />
+                   <span>Entrega em até 24h após a coleta ⚡</span>
+                </li>
+                <li className="flex items-start gap-4">
+                   <CheckCircle className="text-[#E2BA59] shrink-0 mt-1" size={24} />
+                   <span>Lavagem expressa com todo cuidado e agilidade</span>
+                </li>
+             </ul>
+          </div>
+
+          {/* Comparison */}
+          <div className="mb-20">
+            <h3 className="text-3xl font-black mb-16 uppercase tracking-tighter italic border-b-4 border-[#E2BA59] inline-block pb-2">EM CASA X LAVA AKY</h3>
+            <div className="grid md:grid-cols-[1fr,auto,1fr] gap-6 items-center max-w-4xl mx-auto">
+               <div className="bg-white text-stone-800 p-10 rounded-[2.5rem] shadow-2xl border-t-8 border-[#E2BA59]">
+                  <h4 className="font-black text-[#E2BA59] text-2xl mb-8 border-b border-stone-100 pb-4 uppercase">EM CASA</h4>
+                  <ul className="space-y-3 font-bold opacity-70 text-xl text-left pl-8 list-disc">
+                     <li>água</li>
+                     <li>luz</li>
+                     <li>estender</li>
+                     <li>passar</li>
+                     <li>produtos</li>
+                  </ul>
+               </div>
+               <div className="text-6xl font-black text-[#E2BA59] animate-pulse">X</div>
+               <div className="bg-white text-stone-800 p-10 rounded-[2.5rem] shadow-2xl border-t-8 border-[#E2BA59] flex items-center justify-center min-h-[300px]">
+                  <div className="space-y-4">
+                    <h4 className="font-black text-[#E2BA59] text-2xl mb-8 border-b border-stone-100 pb-4 uppercase">LAVA AKY</h4>
+                    <p className="font-black text-[#846CAD] text-3xl leading-tight uppercase tracking-tighter italic">Tudo incluso no valor</p>
+                  </div>
+               </div>
             </div>
+          </div>
+
+          <div className="space-y-6 mb-20 opacity-90 italic">
+            <p className="text-2xl font-bold tracking-tight">Você economiza água, luz e produtos 💧⚡🧴</p>
+            <p className="text-2xl font-bold tracking-tight">Não precisa se preocupar em lavar, estender, passar e dobrar 🧺</p>
+          </div>
+
+          <div className="flex flex-col items-center gap-8 border-t border-white/10 pt-16">
+            <a href="https://wa.me/5553991222096" className="flex items-center gap-4 bg-[#25D366] text-white px-12 py-6 rounded-full text-3xl font-black shadow-2xl hover:scale-110 transition-transform">
+               <Phone size={40} /> 53 99122-2096
+            </a>
           </div>
         </div>
       </section>
@@ -292,6 +370,19 @@ export default function App() {
           </div>
         </section>
 
+        {/* Preço Normal Section */}
+        <section id="preco-normal" className="py-16 bg-white rounded-3xl shadow-xl border border-stone-100 p-8 md:p-12 text-center">
+            <h2 className="text-3xl font-black mb-4 text-[#846CAD] uppercase tracking-widest">VALOR POR CICLO</h2>
+            <p className="text-stone-400 font-bold mb-8 uppercase tracking-widest">Lavagem ou Secagem</p>
+            <div className="inline-block bg-[#F5F3F7] p-10 rounded-[2.5rem] border-2 border-[#846CAD]">
+                <div className="flex items-center justify-center gap-2 text-[#846CAD]">
+                    <span className="text-3xl font-black self-start mt-2">R$</span>
+                    <span className="text-8xl font-black tracking-tighter tabular-nums">18,90</span>
+                </div>
+                <p className="text-xs font-black mt-4 uppercase tracking-[0.3em] opacity-40">Uso avulso em qualquer unidade</p>
+            </div>
+        </section>
+
         {/* Grade de Planos */}
         <section id="planos">
           <div className="text-center mb-12">
@@ -299,9 +390,9 @@ export default function App() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { name: 'Básico', ciclos: 8, preco: 151.20, unit: 18.90, desc: 'Perfeito para quem mora só', link: 'https://wa.link/r44e1y', color: '#E2BA59' },
-              { name: 'Plus', ciclos: 16, preco: 272.00, unit: 17.00, desc: 'Ideal para casais dinâmicos', link: 'https://wa.link/u10gjm', color: '#846CAD', featured: true },
-              { name: 'Premium', ciclos: 24, preco: 384.00, unit: 16.00, desc: 'A melhor escolha para famílias', link: 'https://wa.link/u10gjm', color: '#CB2E50' },
+              { name: 'Básico', ciclos: 8, preco: 136.00, unit: 17.00, desc: 'Perfeito para quem mora só', link: 'https://wa.link/r44e1y', color: '#E2BA59' },
+              { name: 'Plus', ciclos: 16, preco: 268.00, unit: 16.75, desc: 'Ideal para casais dinâmicos', link: 'https://wa.link/u10gjm', color: '#846CAD', featured: true },
+              { name: 'Premium', ciclos: 24, preco: 396.00, unit: 16.50, desc: 'A melhor escolha para famílias', link: 'https://wa.link/u10gjm', color: '#CB2E50' },
             ].map(plano => (
               <div key={plano.name} className={`bg-white p-8 rounded-2xl shadow-lg border border-stone-100 flex flex-col ${plano.featured ? 'border-[#846CAD]' : ''}`}>
                 <h3 className="text-xl font-bold mb-6 uppercase">{plano.name}</h3>
@@ -545,41 +636,19 @@ export default function App() {
         </section>
 
         {/* Simbologia Têxtil */}
-        <section id="simbologia" className="py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#846CAD]">SIMBOLOGIA TÊXTIL</h2>
+        <section id="simbologia" className="py-24">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black mb-4 text-[#846CAD] tracking-tighter uppercase italic">Simbologia Têxtil</h2>
           </div>
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-            <div className="flex justify-center">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full max-w-[320px] rounded-2xl shadow-lg border-2 border-stone-100"
-                src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-37ae5719-fe1b-4d99-b8f8-78438049407d.mp4"
-              />
-            </div>
-            <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-2xl shadow-md border border-stone-50">
-                <h3 className="text-lg font-bold mb-4 text-[#846CAD] border-b border-stone-100 pb-2">Lavagem</h3>
-                <ul className="space-y-2 text-xs font-bold text-stone-500 uppercase tracking-widest">
-                  <li>Lavagem normal</li>
-                  <li>Ciclo delicado</li>
-                  <li className="text-red-400">Lavagem manual</li>
-                  <li className="text-red-500 border-t border-stone-50 pt-1 mt-1">Não utilizar água</li>
-                </ul>
-              </div>
-              <div className="bg-white p-6 rounded-2xl shadow-md border border-stone-50">
-                <h3 className="text-lg font-bold mb-4 text-[#846CAD] border-b border-stone-100 pb-2">Secagem</h3>
-                <ul className="space-y-2 text-xs font-bold text-stone-500 uppercase tracking-widest">
-                  <li>Tambor permitido</li>
-                  <li>Secagem suave</li>
-                  <li className="text-red-400">Não usar secadora</li>
-                  <li className="text-[#E2BA59] border-t border-stone-50 pt-1 mt-1">Secar na sombra</li>
-                </ul>
-              </div>
-            </div>
+          <div className="flex justify-center max-w-5xl mx-auto">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full max-w-[500px] rounded-[3rem] shadow-2xl border-8 border-white"
+              src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-37ae5719-fe1b-4d99-b8f8-78438049407d.mp4"
+            />
           </div>
         </section>
 
