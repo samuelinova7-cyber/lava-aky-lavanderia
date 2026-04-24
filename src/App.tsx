@@ -3,12 +3,26 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MessageCircle, Menu, X, CheckCircle, Clock, Zap, Star, MapPin, Phone, Instagram, Facebook, ChevronDown, ChevronUp } from 'lucide-react';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentInstaImage, setCurrentInstaImage] = useState(0);
+
+  const instaImages = [
+    "https://res.cloudinary.com/dqukldtq1/image/upload/v1777072823/WhatsApp_Image_2026-04-24_at_8.14.26_PM_1_mhc0dh.jpg",
+    "https://res.cloudinary.com/dqukldtq1/image/upload/v1777072823/WhatsApp_Image_2026-04-24_at_8.14.26_PM_e21zk4.jpg",
+    "https://res.cloudinary.com/dqukldtq1/image/upload/v1777072820/WhatsApp_Image_2026-04-24_at_8.14.25_PM_eu4h6r.jpg"
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentInstaImage((prev) => (prev + 1) % instaImages.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="min-h-screen bg-stone-50 text-stone-900 font-sans selection:bg-[#846CAD]/30">
@@ -37,7 +51,7 @@ export default function App() {
               muted
               playsInline
               className="h-12 w-12 rounded-full object-cover border-2 border-[#846CAD] shadow-sm"
-              src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-698df21a-6d22-4040-88d4-05cb8a59cbae.mp4"
+              src="https://res.cloudinary.com/dqukldtq1/video/upload/v1777072817/grok-video-698df21a-6d22-4040-88d4-05cb8a59cbae_nzy6jk.mp4"
             />
             <div className="flex flex-col">
               <span className="text-xl font-bold font-chocolate text-[#846CAD] tracking-tight leading-none">LAVA AKY</span>
@@ -104,16 +118,17 @@ export default function App() {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         {/* Background Video */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 text-white">
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="w-full h-full object-cover opacity-20"
-            src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-698df21a-6d22-4040-88d4-05cb8a59cbae.mp4"
+            className="w-full h-full object-cover opacity-60"
+            src="https://res.cloudinary.com/dqukldtq1/video/upload/v1777072818/grok-video-794ef6cd-e378-40b7-a396-dda96875316c_tomglw.mp4"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-stone-50 via-stone-50/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-[#846CAD]/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-stone-50 via-stone-50/40 to-transparent"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-10 py-32">
@@ -156,7 +171,7 @@ export default function App() {
                 muted
                 playsInline
                 className="w-full h-auto rounded-[2rem]"
-                src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-698df21a-6d22-4040-88d4-05cb8a59cbae.mp4"
+                src="https://res.cloudinary.com/dqukldtq1/video/upload/v1777072817/grok-video-698df21a-6d22-4040-88d4-05cb8a59cbae_nzy6jk.mp4"
               />
             </div>
           </motion.div>
@@ -173,7 +188,7 @@ export default function App() {
             muted
             playsInline
             className="w-full h-full object-cover filter blur-sm"
-            src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-794ef6cd-e378-40b7-a396-dda96875316c.mp4"
+            src="https://res.cloudinary.com/dqukldtq1/video/upload/v1777072818/grok-video-794ef6cd-e378-40b7-a396-dda96875316c_tomglw.mp4"
           />
           <div className="absolute inset-0 bg-[#846CAD]/90"></div>
         </div>
@@ -214,21 +229,56 @@ export default function App() {
       </section>
 
       {/* Siga-nos no Instagram */}
-      <section id="instagram" className="py-16 bg-white overflow-hidden">
+      <section id="instagram" className="py-24 bg-white overflow-hidden">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#846CAD] uppercase tracking-tight">Instagram @lavaaky</h2>
-        <div className="flex overflow-hidden">
-          <motion.div
-            className="flex gap-8"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-          >
-            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20121135.png" className="h-64 rounded-2xl" referrerPolicy="no-referrer" />
-            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20121157.png" className="h-64 rounded-2xl" referrerPolicy="no-referrer" />
-            {/* Duplicate for seamless loop */}
-            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20121135.png" className="h-64 rounded-2xl" referrerPolicy="no-referrer" />
-            <img src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20121157.png" className="h-64 rounded-2xl" referrerPolicy="no-referrer" />
-          </motion.div>
+        
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="relative group overflow-hidden rounded-[3rem] shadow-2xl border-8 border-stone-50">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentInstaImage}
+                initial={{ opacity: 0, scale: 1.1 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 1.2, ease: "easeInOut" }}
+                className="relative aspect-video flex items-center justify-center bg-stone-100"
+              >
+                <img 
+                  src={instaImages[currentInstaImage]} 
+                  className="w-full h-full object-cover" 
+                  alt="Lava Aky Instagram"
+                />
+                
+                {/* Shine Effect Overlay */}
+                <motion.div 
+                  className="absolute inset-0 z-10 pointer-events-none"
+                  initial={{ x: "-100%" }}
+                  animate={{ x: "200%" }}
+                  transition={{ 
+                    duration: 2.5, 
+                    repeat: Infinity, 
+                    repeatDelay: 1,
+                    ease: "easeInOut" 
+                  }}
+                  style={{
+                    background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)',
+                    transform: 'skewX(-20deg)'
+                  }}
+                />
+              </motion.div>
+            </AnimatePresence>
+
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+              {instaImages.map((_, idx) => (
+                <div 
+                  key={idx} 
+                  className={`w-3 h-3 rounded-full transition-all duration-500 ${idx === currentInstaImage ? 'bg-[#846CAD] w-8' : 'bg-white/50'}`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
+
         <div className="text-center mt-12">
           <a href="https://www.instagram.com/lavaaky" target="_blank" rel="noopener noreferrer" className="inline-block bg-[#846CAD] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#CB2E50] transition shadow-lg">
             Seguir no Instagram
@@ -336,7 +386,7 @@ export default function App() {
                 muted
                 playsInline
                 className="w-full max-w-[350px] rounded-2xl shadow-lg"
-                src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/SnapInsta.to_AQN90fgoausIgAIwRxPxLTYRLGSx4MQgu7jJWTHuDJzPi3fFpSFf4ODUeOcEywn3V7J6ekA1QW_rHPVbiiHg90_Yw4D56kiTONfjCzI.mp4"
+                src="https://res.cloudinary.com/dqukldtq1/video/upload/v1777072829/SnapInsta.to_AQN90fgoausIgAIwRxPxLTYRLGSx4MQgu7jJWTHuDJzPi3fFpSFf4ODUeOcEywn3V7J6ekA1QW_rHPVbiiHg90_Yw4D56kiTONfjCzI_eyrujh.mp4"
               />
           </div>
           <div className="space-y-6">
@@ -484,7 +534,7 @@ export default function App() {
               whileHover={{ scale: 1.01 }}
             >
               <img 
-                src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-11%20141212.png" 
+                src="https://res.cloudinary.com/dqukldtq1/image/upload/v1777072812/Captura_de_tela_2026-03-11_141212_zcvbf6.png" 
                 alt="Serviço Deixa Aky" 
                 className="w-full object-cover"
                 referrerPolicy="no-referrer"
@@ -533,7 +583,7 @@ export default function App() {
                   muted
                   playsInline
                   className="w-full max-w-[180px] rounded-xl"
-                  src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-127bef1b-bd80-45fd-8390-59a8e72b4b12.mp4"
+                  src="https://res.cloudinary.com/dqukldtq1/video/upload/v1777072818/grok-video-127bef1b-bd80-45fd-8390-59a8e72b4b12_oyhdtv.mp4"
                 />
               </div>
             </div>
@@ -557,7 +607,7 @@ export default function App() {
               muted
               playsInline
               className="w-full h-auto rounded-xl"
-              src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-7cd289a9-71f8-4134-ab2b-b8b226f6820a.mp4"
+              src="https://res.cloudinary.com/dqukldtq1/video/upload/v1777072816/grok-video-7cd289a9-71f8-4134-ab2b-b8b226f6820a_pgdxdg.mp4"
             />
           </div>
         </section>
@@ -612,7 +662,7 @@ export default function App() {
               muted
               playsInline
               className="w-full max-w-[500px] rounded-[3rem] shadow-2xl border-8 border-white"
-              src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-37ae5719-fe1b-4d99-b8f8-78438049407d.mp4"
+              src="https://res.cloudinary.com/dqukldtq1/video/upload/v1777072818/grok-video-37ae5719-fe1b-4d99-b8f8-78438049407d_oq50jf.mp4"
             />
           </div>
         </section>
@@ -689,7 +739,19 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="relative py-16 bg-stone-900 border-t border-white/5">
+      <footer className="relative py-16 bg-stone-900 border-t border-white/5 overflow-hidden">
+        {/* Footer Background Video */}
+        <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+            src="https://res.cloudinary.com/dqukldtq1/video/upload/v1777072818/grok-video-794ef6cd-e378-40b7-a396-dda96875316c_tomglw.mp4"
+          />
+        </div>
+        
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-12 text-white relative z-10">
           <div className="space-y-6">
             <video
@@ -698,7 +760,7 @@ export default function App() {
               muted
               playsInline
               className="h-16 w-16 rounded-full object-cover border-2 border-[#846CAD] shadow-lg mb-4"
-              src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-698df21a-6d22-4040-88d4-05cb8a59cbae.mp4"
+              src="https://res.cloudinary.com/dqukldtq1/video/upload/v1777072817/grok-video-698df21a-6d22-4040-88d4-05cb8a59cbae_nzy6jk.mp4"
             />
             <p className="text-sm opacity-60 leading-relaxed font-medium">Sua aliada para você aproveitar as coisas boas da vida. Lavanderia inteligente e moderna.</p>
           </div>
