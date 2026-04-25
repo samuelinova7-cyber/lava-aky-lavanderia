@@ -667,6 +667,23 @@ export default function App() {
           </div>
         </section>
 
+        {/* Simbologia Têxtil */}
+        <section id="simbologia" className="py-24">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black mb-4 text-[#846CAD] tracking-tighter uppercase italic">Simbologia Têxtil</h2>
+          </div>
+          <div className="flex justify-center max-w-5xl mx-auto">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full max-w-[500px] rounded-[3rem] shadow-2xl border-8 border-white"
+              src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-37ae5719-fe1b-4d99-b8f8-78438049407d.mp4"
+            />
+          </div>
+        </section>
+
         {/* Unidade Section */}
         <section id="unidades" className="py-16 bg-white rounded-3xl shadow-xl border border-stone-100 p-8 md:p-12 relative overflow-hidden">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 uppercase tracking-tight">COMO <span className="text-[#846CAD]">CHEGAR</span></h2>
@@ -693,7 +710,7 @@ export default function App() {
             </div>
             <div className="relative group">
               <img 
-                src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-06%20133749.png" 
+                src="https://res.cloudinary.com/dqukldtq1/image/upload/v1777075621/Captura_de_tela_2026-04-24_210618_lqx4bk.png" 
                 alt="Localização Lava Aky" 
                 className="w-full rounded-2xl shadow-lg h-[350px] object-cover"
                 referrerPolicy="no-referrer"
